@@ -1,0 +1,18 @@
+Por si les sirve , usé esto para modificar el formato de una fecha que la nueva función de 
+filtrado automático no tomaba. La fecha venía así: "Mon, 10 Jun 2019 16:20:01 GMT", y la 
+variable dateposted_raw la tomaba como array. Luego la puse así: "10 Jun 2019" pero la validación 
+automática no funcionó. Y finalmente con este código me quedó así "06/10/2019" y eso sí funcionó: 
+
+$dateposted = $j->date;
+$start = strpos($dateposted, ',') + 1;
+$end = strrpos($dateposted, ':') - 5;
+$dateposted = trim(substr($dateposted, $start, $end - $start));
+$date = $dateposted;
+$date = date('d/m/Y', strtotime($date));
+$date = DateTime::createFromFormat('d/m/Y', $date);
+$datesave = $date->format('m/d/Y');
+$job['dateposted_raw'] = $datesave;
+
+Esto: date('d/m/Y', strtotime($date)); debe funcionar cuando la fecha viene en inglés 
+con el nombre del mes completo o abreviado con tres letras.
+

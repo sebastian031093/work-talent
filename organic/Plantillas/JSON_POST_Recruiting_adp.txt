@@ -1,0 +1,181 @@
+(function () {
+    var jobs = [];
+    var out = {};
+    var cont = 1;
+    var json;
+
+  
+  do {
+
+    var data = {"filters":[{"name":"state","label":"State"},
+                           {"name":"city","label":"City"},{"name":"grp",
+                                                           "label":"Area of Interest"},
+                           {"name":"typeOfFulltime","label":"Full-Time/Part-Time"}],
+                "results":{"pageTitle":"Search Results","zeroResultsMessage":"We're sorry but we have no job openings at this time that match your search criteria. Please try another search.","searchFailureMessage":"Oops! Something went wrong.  Search has encountered a problem. Try searching again","resultsFoundLabel":"results found","bookmarkText":"Bookmark This",
+                           "pageSize":"100","sortOrder":"00001000","shareText":"Share","fields":[{"name":"ptitle","label":"Published Job Title"},
+                {"name":"allLocations","label":"All Locations"},{"name":"grp","label":"Functional Group"},
+                {"name":"locationCode","label":"Location Code"}]},"pagefilter":{"page":cont},"rl":"enUS"};
+
+        $.ajax({
+            url: 'https://recruiting.adp.com/srccar/public/rest/1/17501/search/',                                            // 1) url
+            headers: {                                                      
+                "accept": "application/json, text/plain, */*",
+                "Content-Type":"application/json",              // 2) headers
+            },
+            type: 'POST',                                        // 3) tipo
+            dataType: "json",                                   // 4) data que retorna
+            //data: data,
+            data: JSON.stringify(data),
+            async: false,
+            success: function (result) {
+                msg("SUCCES");
+                json = result.jobs;                                 // 5) ruta de los trabajos
+				//msg(json.length);
+                for (var i = 0; i < json.length; i++) {
+                    var job = {};
+
+                    var dom = "";
+
+
+                    job.title    = json[i].ptitle;
+                    job.url      = json[i].url;
+                    job.location = json[i].city+', '+json[i].state;
+                    
+
+                    //job.source_jobtype = json[i].jobtypeSelector;
+                    //job.source_salary = json[i].jobtypeSelector;
+
+
+    				//job.logo = json[i].logoSelector;
+   					//job.source_empname = json[i].empnameSelector;
+                    //job.source_apply_email = json[i].emailSelector;
+    				
+    				
+    				//job.dateposted_raw = json[i].datepostedSelector;
+              
+
+
+                    /*  var fecha = json[i].
+                        fecha = fecha.split(" ")[0].split("-");
+                        job.dateposted_raw =  fecha[1]+'/'+fecha[2]+'/'+fecha[0];*/
+
+                    job.temp = 1;
+
+                    jobs.push(job);
+                }
+                cont++;
+            },
+            error: function (error) {
+                msg(error);
+            }
+        });
+    } while (json.length > 0);                                 // 6) condicion de parada
+
+    out["jobs"] = jobs;
+    return out;
+})();
+
+
+//////////////////////////////////////
+
+
+boo.start(boo.out.url);
+var url = 'https://recruiting.adp.com/srccar/public/rest/1/1004841/job/'+boo.out.url.split("&r=")[1];
+var aux;
+
+boo.then(function(){
+  
+	aux = boo.evaluate(function(url_) {
+  
+    var xhrrequest = new XMLHttpRequest();
+    xhrrequest.open("GET", url_, false);
+    xhrrequest.setRequestHeader("Accept","application/json,application/xml");
+    xhrrequest.setRequestHeader("Accept-Language","en-CA,en;q=0.8,en-GB;q=0.6,en-US;q=0.4,es;q=0.2");
+    xhrrequest.setRequestHeader("Cache-Control","no-cache");
+    xhrrequest.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+
+
+	
+    var hola = "";
+    xhrrequest.onreadystatechange = function() {
+        //return xhrrequest.status;
+        //hola = "[Y]-> " + xhrrequest.status;
+        if(xhrrequest.readyState == 4 && xhrrequest.status == 200) 
+          //console.log(xhrrequest.responseText);
+          {
+            console.log(xhrrequest.responseText);
+            hola = xhrrequest.responseText;
+          }
+    };
+	
+    xhrrequest.send(); 
+    return hola;
+}, url);
+
+
+  	var json = JSON.parse(aux);
+		
+      var job = {};
+  job.html = json.fields[0].content;
+		
+		/*job-data-start*/
+
+		// job.location = $("", html).find("").text();
+		// job.logo = $("div.job-item-img", html).attr("style");
+		// job.source_apply_email = $("", html).find("").text();
+		// job.source_empname = $("", html).find("").text();
+		  // job.source_jobtype = $("span[ng-repeat='e in vm.job.typeOfEmployment']", html).text();
+		// job.source_salary = $("", html).find("").text();
+
+		//	job.html = boo.removeTextBefore(job.html, "", false);
+		//	job.html = boo.removeTextAfter(job.html, "", true);
+			job.html = boo.cleanHTML(job.html);
+		
+		/*job-data-end*/
+      this.updateJob(job);
+  
+});
+
+boo.run();
+
+
+
+/////////////////////////////////////
+
+(function () {
+    var out = {};
+    var job = {};
+    var json;
+    var jobid = pass_it["job"].url.split("&r=").pop();
+    var endpoint = "https://recruiting.adp.com/srccar/public/rest/1/99001/job/" + jobid + "?prc=RMPOD4&rl=enUS";
+    msg(endpoint);
+    $.ajax({
+      url: endpoint,
+      headers: {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      type: 'GET',
+      async: false,
+      success: function (result) {
+        json = result;
+  
+        var full_html1 = json.fields[0].content;
+        var full_html = json.fields[0].label;
+        var full_html2 = json.fields[1].label;
+        var full_html3 = json.fields[1].content;
+  
+        job.html = "<h3>" + full_html + "</h3>" + full_html1 + "<h3>" + full_html2 + "</h3>" + full_html3;
+        job.html = cleanHTML(job.html);
+        var tmp = document.createElement("DIV");
+        tmp.innerHTML = job.html;
+        job.jobdesc = tmp.textContent.trim();
+  
+      },
+      error: function (error) {
+        msg(error);
+      }
+    });
+  
+    out["job"] = job;
+    return out;
+  })();

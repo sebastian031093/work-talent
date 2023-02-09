@@ -1,0 +1,188 @@
+job.location = job.location.replace("（地図）",""); 
+		job.location = job.location.replace("求人","").trim();
+		job.location = job.location.replace("京急","").trim();
+		job.location = job.location.replace("他各","").trim();
+		job.location = job.location.replace("全国","").trim();  // todo el país
+		job.location = job.location.replace("空港","").trim(); //aeropuerto
+		job.location = job.location.replace("所在","").trim();//hotel
+		job.location = job.location.replace("徒歩","").trim();//Caminar
+        job.location = job.location.replace(/無料シャトルバス/gi, "").trim();
+	    job.location = job.location.replace(/の営業所/gi, "").trim();
+	    job.location = job.location.replace(/から徒歩/gi, "").trim();
+	    job.location = job.location.replace(/より徒歩/gi, "").trim();
+	    job.location = job.location.replace(/地下鉄/gi, "").trim();
+	    job.location = job.location.replace(/アクセス/gi, "").trim();
+	    job.location = job.location.replace(/ください/gi, "").trim();
+	    job.location = job.location.replace(/本社お/gi, "").trim();
+	    job.location = job.location.replace(/を参照/gi, "").trim();
+	    job.location = job.location.replace(/が最寄/gi, "").trim();
+	    job.location = job.location.replace(/オフィス/gi, "").trim();
+	    job.location = job.location.replace(/住所 /gi, "").trim();
+	    job.location = job.location.replace(/その他/gi, "").trim();
+	    job.location = job.location.replace(/メトロ/gi, "").trim();
+	    job.location = job.location.replace(/時間/gi, "").trim();
+	    job.location = job.location.replace(/本社/gi, "").trim(); 
+	    job.location = job.location.replace(/直結/gi, "").trim();   
+	    job.location = job.location.replace(/以内/gi, "").trim();  
+	    job.location = job.location.replace(/程度/gi, "").trim();
+	    job.location = job.location.replace(/無料/gi, "").trim();  
+	    job.location = job.location.replace(/勤務/gi, "").trim();
+	    job.location = job.location.replace(/で約/gi, "").trim();
+	    job.location = job.location.replace(/バス/gi, "").trim();
+	    job.location = job.location.replace(/など/gi, "").trim();
+	    job.location = job.location.replace(/ビル/gi, "").trim();
+	    job.location = job.location.replace(/より/gi, "").trim(); 
+	    job.location = job.location.replace(/各/gi, "").trim();   
+	    job.location = job.location.replace(/■/gi, "").trim();
+	    job.location = job.location.replace(/★/gi, "").trim();  
+	    job.location = job.location.replace(/☆/gi, "").trim();  
+	    job.location = job.location.replace(/：/gi, "").trim();  
+	    job.location = job.location.replace(/！/gi, "").trim();  
+	    job.location = job.location.replace(/▼/gi, "").trim();  
+	    job.location = job.location.replace(/◆/gi, "").trim();  
+	    job.location = job.location.replace(/◇/gi, "").trim(); 
+	    job.location = job.location.replace(/♪/gi, "").trim();   
+	    job.location = job.location.replace(/＜/gi, "").trim();
+	    job.location = job.location.replace(/＞/gi, "").trim();  
+	    job.location = job.location.replace(/／/gi, "").trim();  
+	    job.location = job.location.replace(/－/gi, "").trim();
+	    job.location = job.location.replace(/━/gi, "").trim();  
+	    job.location = job.location.replace(/-/gi, "").trim();
+	    job.location = job.location.replace(/ＪＲ/gi, "").trim();
+	    job.location = job.location.replace(/欄/gi, "").trim();
+	    job.location = job.location.replace(/朝/gi, "").trim();
+	    job.location = job.location.replace(/JR/gi, "").trim();
+	    job.location = job.location.replace(/線/gi, "").trim();  
+	    job.location = job.location.replace(/駅/gi, "").trim();  
+	    job.location = job.location.replace(/分/gi, "").trim();
+	    job.location = job.location.replace(/地/gi, "").trim();
+	    job.location = job.location.replace(/〒/gi, "").trim();
+	    job.location = job.location.replace(/0/gi, "").trim();
+	    job.location = job.location.replace(/1/gi, "").trim();
+	    job.location = job.location.replace(/2/gi, "").trim();
+	    job.location = job.location.replace(/3/gi, "").trim();
+	    job.location = job.location.replace(/4/gi, "").trim();
+	    job.location = job.location.replace(/5/gi, "").trim();
+	    job.location = job.location.replace(/6/gi, "").trim(); 
+	    job.location = job.location.replace(/7/gi, "").trim();
+	    job.location = job.location.replace(/8/gi, "").trim();
+	    job.location = job.location.replace(/9/gi, "").trim();
+	    job.location = job.location.split("※");
+	    job.location = job.location[0];
+	    job.location = job.location.split("、");
+	    job.location = job.location[0];
+	    job.location = job.location.split("・");
+	    job.location = job.location[0];
+	    job.location = job.location.split(",");
+	    job.location = job.location[0];
+				
+        if (job.location.indexOf('北海道') > -1) {job.location = "北海道";}//Hokkaido
+	    if (job.location.indexOf('関東') > -1) {job.location = "関東";}//Kanto
+	    if (job.location.indexOf('中部') > -1) {job.location = "中部";}//Chubu
+	    if (job.location.indexOf('近畿') > -1) {job.location = "近畿";}//Kinki
+	    if (job.location.indexOf('中国') > -1) {  job.location = "中国";}//Chugoku
+	    if (job.location.indexOf('四国') > -1) {  job.location = "四国";}//Shikoku
+	    if (job.location.indexOf('九州・沖縄') > -1) {job.location = "九州・沖縄";}//Kyushu y Okinawa
+	    if (job.location.indexOf('青森') > -1) {job.location = "青森 東北地方";}//Aomori
+	    if (job.location.indexOf('岩手') > -1) {job.location = "岩手 東北地方";}//Iwate
+	    if (job.location.indexOf('宮城') > -1) {job.location = "宮城 東北地方";}//Miyagi
+	    if (job.location.indexOf('秋田') > -1) {job.location = "秋田 東北地方";}//Akita
+	    if (job.location.indexOf('山形') > -1) {job.location = "山形 東北地方";}//Yamagata
+	    if (job.location.indexOf('福島') > -1) {job.location = "福島 東北地方";}//Fukushima
+		if (job.location.indexOf('福島市') > -1) {job.location = "福島 東北地方";}//Fukushima
+	    if (job.location.indexOf('茨城') > -1) {job.location = "茨城 関東";}//Ibaraki
+	    if (job.location.indexOf('栃木') > -1) {job.location = "栃木 関東";}//Tochigu
+	    if (job.location.indexOf('群馬') > -1) {job.location = "群馬 関東";}//Gunma
+	    if (job.location.indexOf('埼玉') > -1) {job.location = "埼玉 関東";}//Saitama
+	    if (job.location.indexOf('千葉') > -1) {job.location = "千葉 関東";}//Chiba
+	    if (job.location.indexOf('東京') > -1) {job.location = "東京 関東";}//Tokio
+		if (job.location.indexOf('首都圏') > -1) {job.location = "東京 関東";}//Tokio
+	    if (job.location.indexOf('神奈川') > -1) {job.location = "神奈川 関東";}//Kanagawa
+		if (job.location.indexOf('新潟') > -1) {job.location = "新潟 中部";}//Niigata
+	    if (job.location.indexOf('富山') > -1) {job.location = "富山 中部";}//Toyama
+	    if (job.location.indexOf('石川') > -1) {job.location = "石川 中部";} //Ishikawa
+	    if (job.location.indexOf('福井') > -1) {job.location = "福井 中部";} //Fukui
+	    if (job.location.indexOf('沖縄') > -1) {job.location = "沖縄 中部";}//Yamanashi
+	    if (job.location.indexOf('長野') > -1) {job.location = "長野 中部";}//Nagano
+	    if (job.location.indexOf('岐阜') > -1) {job.location = "岐阜 中部";}//Gifu
+	    if (job.location.indexOf('静岡') > -1) {job.location = "静岡 中部";}//Shizuika
+	    if (job.location.indexOf('愛知') > -1) {job.location = "愛知 中部";}//Aichi
+	    if (job.location.indexOf('三重') > -1) {job.location = "三重 近畿";}//Mie
+	    if (job.location.indexOf('滋賀') > -1) {job.location = "滋賀 近畿";}//Shiga
+	    if (job.location.indexOf('京都') > -1) {job.location = "京都 近畿";}//Kyoto
+	    if (job.location.indexOf('大阪') > -1) {job.location = "大阪 近畿";}//Osaka
+	    if (job.location.indexOf('兵庫') > -1) {job.location = "兵庫 近畿";}//Hyogo
+	    if (job.location.indexOf('奈良') > -1) {job.location = "奈良 近畿";}//Nara
+	    if (job.location.indexOf('和歌山県') > -1) {job.location = "和歌山県 近畿";}//Wakayama
+	    if (job.location.indexOf('鳥取') > -1) {job.location = "鳥取 中国";}//Tottori
+	    if (job.location.indexOf('島根') > -1) {job.location = "島根 中国";}//Shimane
+	    if (job.location.indexOf('岡山') > -1) {job.location = "岡山 中国";}//Okayama
+	    if (job.location.indexOf('広島') > -1) {job.location = "広島 中国";}//Hiroshima
+	    if (job.location.indexOf('山口') > -1) {job.location = "山口 中国";}//Yamaguchi
+	    if (job.location.indexOf('徳島') > -1) {job.location = "徳島 四国";}//Tokushima
+	    if (job.location.indexOf('香川') > -1) {job.location = "香川 四国";}//Kagawa
+	    if (job.location.indexOf('愛媛') > -1) {job.location = "愛媛 四国";}//Ehime
+	    if (job.location.indexOf('高知') > -1) {job.location = "高知 四国";}//Kochi
+	    if (job.location.indexOf('福岡') > -1) {job.location = "福岡市博多区";}//Fukuoka 
+	    if (job.location.indexOf('佐賀') > -1) {job.location = "佐賀 九州・沖縄";}//Saga
+	    if (job.location.indexOf('長崎') > -1) {job.location = "長崎 九州・沖縄";}//Nagasaki
+	    if (job.location.indexOf('熊本') > -1) {job.location = "熊本 九州・沖縄";}//Kumamoto
+	    if (job.location.indexOf('大分') > -1) {job.location = "大分 九州・沖縄";}//Oita
+	    if (job.location.indexOf('宮崎') > -1) {job.location = "宮崎 九州・沖縄";}//Miyazaki
+	    if (job.location.indexOf('鹿児島') > -1) {job.location = "鹿児島 九州・沖縄";}//Kagoshima
+		if (job.location.indexOf('京浜') > -1) {job.location = "東京 関東";}//Keihin = Tokio
+		if (job.location.indexOf('鶴見') > -1) {job.location = "横浜 神奈川 関東";}//Tsurumi = Yokohama
+		if (job.location.indexOf('京急') > -1) {job.location = "神奈川 関東";}//Keikyu=Kanagawa
+		if (job.location.indexOf('南武') > -1) {job.location = "南武 山梨 中部";}//Nambu=Yamanashi
+		if (job.location.indexOf('横浜') > -1) {job.location = "横浜 神奈川 関東";}//Yokohama,Kanagawa
+		if (job.location.indexOf('小田原') > -1) {job.location = "小田原 神奈川 関東";}//Odawara,Kanagawa  
+		if (job.location.indexOf('横須賀') > -1) {job.location = "横須賀 神奈川 関東";}//Yokosuka,Kanagawa 
+		if (job.location.indexOf('金沢市') > -1) {job.location = "小田原 中部";}//Kanazawa,Chubu
+		if (job.location.indexOf('中之島') > -1) {job.location = "大阪 近畿";}//Nakanoshima = Osaka
+		if (job.location.indexOf('天王寺') > -1) {job.location = "大阪 近畿";}//Tennoji = Osaka
+		if (job.location.indexOf('なんば') > -1) {job.location = "大阪 近畿";}//Namba = Osaka
+		if (job.location.indexOf('西中島') > -1) {job.location = "大阪 近畿";}//Nishinakajima = Osaka
+		if (job.location.indexOf('東淀川') > -1) {job.location = "東淀川 大阪 近畿";}//higashiyodogawa, Osaka
+		if (job.location.indexOf('淀川') > -1) {job.location = "淀川 大阪 近畿";}//Yodogawa, Osaka
+		if (job.location.indexOf('京橋') > -1) {job.location = "東京 関東";}//Kyobashi = Tokio
+		if (job.location.indexOf('心斎橋') > -1) {job.location = "大阪 近畿";}//Shinsaibashi = Osaka
+		if (job.location.indexOf('大阪') > -1) {job.location = "大阪 浪速区 近畿";}//Osaka
+		if (job.location.indexOf('枚方') > -1) {job.location = "大阪 枚方 近畿";}//Hirakata,Osaka
+		if (job.location.indexOf('堺') > -1) {job.location = "堺 大阪 近畿";}//Sakai,Osaka
+		if (job.location.indexOf('阪神') > -1) {job.location = "阪神 兵庫 近畿";}//Hanshin,Hyogo
+		if (job.location.indexOf('山手') > -1) {job.location = "横浜 神奈川 関東";}//Yamate,Yokohama
+		if (job.location.indexOf('銀座') > -1) {job.location = "東京 関東";}//Ginza,Tokio  
+		if (job.location.indexOf('東急') > -1) {job.location = "東京 関東";}//Tokyu = Tokio
+		if (job.location.indexOf('京葉線') > -1) {job.location = "東京 関東";}// tren ubicado en tokio
+		if (job.location.indexOf('六甲ライナー') > -1) {job.location = "神戸市 兵庫 近畿";}//Rokko Liner(tren) = Hyogo
+		if (job.location.indexOf('神戸') > -1) {job.location = "神戸市 兵庫 近畿";}//Ciudad Kobe, Hyogo
+		if (job.location.indexOf('和歌山') > -1) {job.location = "和歌山 近畿";}//Wakayama,Kinki
+		if (job.location.indexOf('世田谷') > -1) {job.location = "東京 関東";}//Setagaya, Tokio
+		if (job.location.indexOf('梅田') > -1) {job.location = "大阪 近畿";}//Umeda = Osaka	
+		if (job.location.indexOf('玉造') > -1) {job.location = "島根 中国";}//Tamatsukuri = Shimane
+		if (job.location.indexOf('針中野') > -1) {job.location = "大阪 近畿";}//Harinakano = Osaka	
+		if (job.location.indexOf('谷町') > -1) {job.location = "大阪 近畿";}//Tanimachi = Osaka	
+		if (job.location.indexOf('淀屋橋') > -1) {job.location = "大阪 近畿";}//Yodoyabashi  = Osaka
+		if (job.location.indexOf('阿倍野') > -1) {job.location = "大阪 近畿";}//Abeno  = Osaka
+		if (job.location.indexOf('肥後橋') > -1) {job.location = "大阪 近畿";}//Higobashi = Osaka
+		if (job.location.indexOf('北加賀屋') > -1) {job.location = "大阪 近畿";}//Kitakagaya = Osaka
+		if (job.location.indexOf('函館') > -1) {job.location = "函館 北海道";}//hakodate, Hokkaido
+		if (job.location.indexOf('旭川') > -1) {job.location = "旭川市 北海道";}//Asahikawa, Hokkaido
+		if (job.location.indexOf('札幌') > -1) {job.location = "札幌市 北海道";}//Sapporo, Hokkaido
+		if (job.location.indexOf('さっぽろ') > -1) {job.location = "札幌市 北海道";}//Sapporo, Hokkaido
+		if (job.location.indexOf('芽室') > -1) {job.location = "北海道";}//Memuro, Hokkaido
+		if (job.location.indexOf('成田区') > -1) {job.location = "成田区";}//Sendai
+		if (job.location.indexOf('成田') > -1) {job.location = "成田";}//Narita
+		if (job.location.indexOf('汐留') > -1) {job.location = "汐留";}//	Minato-ku
+		if (job.location.indexOf('大崎') > -1) {job.location = "大崎";}//	Shinagawa-ku 
+		if (job.location.indexOf('博多') > -1) {job.location = "福岡市博多区";}//Hakata-ku, Fukuoka 
+		if (job.location.indexOf('千代田') > -1) {job.location = "千代田区 東京";}//Chiyoda, Tokio 
+		if (job.location.indexOf('愛知') > -1) {job.location = "清須市";}//Kiyosu, Aichi
+  
+		if(job.location.length>25){ // Si tiene un texto muy amplio es xq no se tomo la location
+			job.location = "日本";
+		}else if(job.location.length<1){
+		  job.location = "日本";
+		}else{
+		  job.location = job.location+" 日本";
+		}

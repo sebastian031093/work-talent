@@ -1,0 +1,53 @@
+boo.start(boo.out.url);
+
+boo.then(function() {
+  //lets take a picture of the current page and save its html
+  this.pic();
+  var html = this.getHTML();
+  html = $.parseXML(html);
+  //Echo # of page and add +1 to current page counter
+  this.msg("Starting page: "+(++this.out.numpage));
+
+  //create page object -- pagejobs => array , have_next_page => false , nextpage => currentpage +1
+  var page = {pagejobs:[], have_next_page: false, nextpage: this.out.numpage + 1};
+
+  /*extract-start*/
+  //var remap = {};
+  $("job",html).each(function( index ) {/*loop-start*/
+    var job = {};/*init*/
+
+    job.title = $(this).find("title").text().split("[").pop().split("]").shift();
+    job.title = job.title.split("-")[0];
+	job.title = job.title.split(" - ")[0];
+    job.title = job.title.split(" – ")[0];
+    job.title = job.title.replace(" ITALIA", ""); 
+    job.source_empname =  $(this).find("company").text().split("[").pop().split("]").shift();
+    job.location = $(this).find("city").text().split("[").pop().split("]").shift()+" "+$(this).find("country").text().split("[").pop().split("]").shift();
+    job.multilocation=",";
+    //job.location = boo.cleanLoc(job.location,country,remap);
+    job.url = $(this).find("url").text().split("[").pop().split("]").shift();
+    //job.html = $(this).find("description").text();  
+    //job.html = boo.cleanHTML(job.html);
+    //job.jobdesc = $("<div>"+job.html+"</div>").text();
+    job.temp="20181013";
+    job.jobdesc = $("<div>"+job.html+"</div>").text();
+    //job.temp = $(this).find("").text();
+    page.pagejobs.push(job);
+
+  });/*loop-end*/
+  /*extract-end*/
+
+  //Echo # of jobs found
+  this.msg("Jobs found: "+page.pagejobs.length);
+  //Send jobs to Ghost Process
+  this.send_jobs(page.pagejobs);
+
+  /*check-nextpage-start*//*check-nextpage-end*/
+
+  /*goto-nextpage-start*//*goto-nextpage-end*/
+
+}, "extract");
+boo.run();
+
+
+/*nextpage-func-start*//*nextpage-func-start*/

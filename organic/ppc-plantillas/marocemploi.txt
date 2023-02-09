@@ -1,0 +1,81 @@
+$url = trim((String) $j->loc);
+
+//echo '---URL: '.$url.'---';
+
+if(strpos($url, '/offre/')!==false){
+
+  //Request Headers
+  $opt = array(
+    'http'=>array(
+      'method'=>"GET",
+      'header'=>"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3\r\n" .
+      "Accept-Language: en,es-ES;q=0.9,es;q=0.8,de;q=0.7,fi;q=0.6,zh-CN;q=0.5,zh;q=0.4\r\n" .
+      "Cache-Control: max-age=0\r\n" .
+      "Connection: keep-alive\r\n" .
+      "Host: marocemploi.net\r\n" .
+      "Save-Data: on\r\n" .
+      "Upgrade-Insecure-Requests: 1\r\n"
+    )
+  );
+  $context = stream_context_create($opt);
+
+  $html = file_get_contents($url,false,$context); //Obtiene el HTML del url
+  $html = utf8_decode($html);//Decode de caracteres UTF8
+
+  //Verificamos si file_get_contents devuelve false, que quiere decir que no abrió la página
+  //También verificamos que no existe la clase "jobsearch-description" porque en ocasiones redirige a la página principal
+  if($html === false && strpos($html, 'jobsearch-description')===false)
+    echo 'ERROR OPENING URL';
+  else{
+
+    $doc = new DOMDocument(); // Crea un nuevo documento HTML y lo asigna a variable $doc
+    $doc->loadHTML($html); // Carga documento HTML
+
+    //JOBDATA
+    $divs = $doc->getElementsByTagName('div'); //Obtiene todos los elementos/selectores DIV para obtener la descripción
+    foreach ($divs as $div) {
+      $divclass = $div->getAttribute('class'); //Obtiene el atributo class de cada elemnto div
+
+      //Filtramos por el elemnto div según clase, en este caso jobsearch-description que contiene descripción del job
+      if ($divclass == 'jobsearch-description') {
+        $jobhtml = $div->nodeValue;
+      }
+    }
+
+    //LOCATION
+    $is = $doc->getElementsByTagName('i'); //Obtiene todos los elementos/selectores i para obtener el location
+    $iclass = $is->item(0)->getAttribute('class');//Obtiene el atributo class de cada elemnto i
+    //echo '-----ICLASS: '.$iclass.'-----';
+
+    //Filtramos por el elemento i que contiene datos del location
+    if ($iclass == 'fa fa-map-marker') {
+
+      $uls = $doc->getElementsByTagName('ul'); //Obtiene todos los elementos/selectores ul para obtener el location
+      foreach ($uls as $ul) {
+        $ulclass = $ul->getAttribute('class');//Obtiene el atributo class de cada elemnto ul
+        //Filtramos por el elemento ul que contiene el location y obtenemos el elemnto li que tiene la data
+        if ($ulclass == 'jobsearch-jobdetail-options') {
+          $location = $ul->childNodes->item(0)->nodeValue;
+        }
+
+      }
+    }
+
+
+    $h2 = $doc->getElementsByTagName('h2');//Obtiene todos los elementos/selectores he para obtener el title
+    $title = $h2->item(0)->nodeValue; //El primer elemnto h2 contiene el title, por ello lo tomamos directo
+
+
+    $job['title'] = $title;
+    $job['title'] = html_entity_decode($job['title'], ENT_QUOTES | ENT_XML1, 'UTF-8');
+    //echo '-----Title: '.$job['title'].'-----';
+    $job['location'] = ($location) ? $location : 'Maroc';
+    $job['location'] = str_replace('Google Map','',$job['location']);
+    //echo '-----Location: '.$job['location'].'-----';
+    $job['url'] = $url;
+    $job['html'] = $jobhtml;
+    $job['jobdesc'] = strip_tags($job["html"]);
+
+    $job['temp']=1;
+  }
+}

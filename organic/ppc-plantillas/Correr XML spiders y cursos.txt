@@ -1,0 +1,32 @@
+MANUAL BASICO XML SPIDER
+https://docs.google.com/presentation/d/1OjmUfrPYTbTaADH_cW28mdM1rg9bli5MjQ2akyawY7M/edit#slide=id.p
+
+MANAGE EXCEPCTIONS
+https://docs.google.com/presentation/d/1qRicIRDN9AnbwafssrxsQSmU2KtsOABVm6C08d8wyC0/edit?usp=sharing
+
+
+
+cd /home/www/xml-spiders/class
+
+primero haces test copiando y pegando lo siguiente: 
+
+php spider_feed_manager.php SCANID_AQUI 1 0 go
+
+
+luego haces run con esto copiando y pegando esto: 
+
+php spider_feed_manager.php SCANID_AQUI 1 1 go
+
+
+php spider_feed_manager.php X 1 1 go
+php spider_feed_manager.php X 1 1 go
+php spider_feed_manager.php X 1 1 go
+php spider_feed_manager.php X 1 1 go
+php spider_feed_manager.php X 1 1 go
+
+json result XML spider
+http://beta.neuvoo.com/bootemp/
+
+http://beta.neuvoo.com/ghost/spider-results.php?n=AQUI El json
+
+

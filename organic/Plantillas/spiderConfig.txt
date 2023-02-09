@@ -1,0 +1,29 @@
+Inactive Jquery: No inyecta la libreria jquery porque aveces jquery cohibe a javascript para obtener ciertos elementos.
+
+ignoreLoadErrors: Continua el procesamiento aún cuando la página tiene menos de 100 caracteres.  
+
+waitForPageLoadEvent: Espera el evento load del DOM.
+
+waitForResources: Espera que se resuelvan todos los requests hechos por la página.
+
+Noimage: Evita la descarga de imágenes.
+
+skipResources: Filtra ciertos recursos mediante blacklist de dominios.
+
+noUnnecessaryResources:Bloquea ciertos recursos por tipo de recursos .
+
+Waitfor: Espera la existencia de un elemento en el DOM.-> out.waitFor
+WaitForFunction: espera a la ejecución de una función que retorne verdadero.
+Wait: espera que la página cargue. (onload event, requests, más de 100 caracteres). -> out.wait
+ejemplo: 
+(function() {
+	var out = {};
+  	out.waitFor = ""
+    return out;
+})();
+(function() {
+	var out = {};
+  	out.iframeSelector = ""
+  	out.iframeWaitFor = ""
+    return out;
+})(); 

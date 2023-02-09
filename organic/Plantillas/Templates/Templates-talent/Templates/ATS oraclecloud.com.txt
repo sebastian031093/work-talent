@@ -1,0 +1,321 @@
+//  https://ekgn.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/requisitions
+
+//Modo Normal  y modo Json Post
+
+//INFINITE PAGINATION 
+
+(function () {
+	var out = {};
+	if (!document.getElementById('box-tmp')) {
+	// Crea un div para darle altura a la pagina
+	var ref = document.querySelector('li[class="joblist-grid-item"]'); //Selector que contiene los jobs 
+	var newEle = document.createElement('div');
+	newEle.setAttribute('id', 'box-tmp')
+	ref.appendChild(newEle);
+	newEle.style.height = '9000px' // para darle altura a la pagina 
+	}
+	msg(pass_it);
+	if (!pass_it["heights"]) out["pass_it"] = { "heights": [] };
+	else out["pass_it"] = pass_it;
+
+	out["has_next_page"] = true;
+	if (out["pass_it"]["heights"].length > 3) {
+		var last_three_heights = out["pass_it"]["heights"].slice(out["pass_it"]["heights"].length - 3);
+		if (last_three_heights[0] == last_three_heights[1] && last_three_heights[1] == last_three_heights[2])
+			out["has_next_page"] = false;
+	}
+	window.scrollBy(0, document.body.scrollHeight);
+
+	out["wait"] = true;
+	out["pic"] = true;
+	out["html"] = true;
+
+	out["pass_it"]["heights"].push(document.querySelectorAll('li[class="joblist-grid-item"]').length);//Selector de los JOBS
+	return out;
+})();
+
+// Extract Normal
+
+(function() {
+	var out = {};
+     var html_jobs = document.querySelectorAll('li[class="joblist-grid-item"]');
+  	var jobs = [];for(var x in html_jobs){
+    	if(typeof html_jobs[x] =="function") continue;
+      	if(typeof html_jobs[x] =="number") continue;
+    	var job = {};
+    	var elem = html_jobs[x];
+    	job.title = elem.querySelector("h3").textContent.trim();
+    	var length = elem.querySelector("a").href.split("/").length;
+        var id = elem.querySelector("a").href.split("/");
+        job.url ="https://fa-elfc-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/"+id[length-1]+"/?utm_medium=jobshare"
+    	job.location = elem.querySelector('span[class="job-location"]').textContent.trim();
+        //job.dateposted_raw = elem.querySelector("").textContent.trim();
+        //job.logo = elem.querySelector("").getAttribute("src").trim();
+		//job.source_apply_email = elem.querySelector("").textContent.trim();
+		//job.source_empname = elem.querySelector("").textContent.trim();
+		//job.source_jobtype = elem.querySelector("").textContent.trim();
+		//job.source_salary = elem.querySelector("").textContent.trim();
+       	job.temp = 1;
+    	jobs.push(job);
+  	} 
+  
+	out["jobs"]= jobs;
+  	return out;
+})();
+
+// Extract Normal
+
+(function () {
+    var jobs = [];
+    var out = {};
+    var cont = 0;
+    var json;
+
+  
+  do {
+
+    //var data =  ;
+
+        $.ajax({
+            url: 'https://ekgn.fa.us6.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true&expand=requisitionList.secondaryLocations&finder=findReqs;siteNumber=CX_1,facetsList=LOCATIONS%3BWORK_LOCATIONS%3BTITLES%3BCATEGORIES%3BPOSTING_DATES,limit=24,offset='+cont,                                            // 1) url
+            headers: {                                                      
+                "accept": "*/*",
+                "Content-Type":"application/vnd.oracle.adf.resourceitem+json;charset=utf-8",              // 2) headers
+            },
+            type: 'GET',                                        // 3) tipo
+            dataType: "json",                                   // 4) data que retorna
+            //data: data,
+           // data: JSON.stringify(data),
+            async: false,
+            success: function (result) {
+                msg("SUCCES");
+                json = result.items[0].requisitionList;                                 // 5) ruta de los trabajos
+				//msg(json.length);
+                for (var i = 0; i < json.length; i++) {
+                    var job = {};
+
+                    var dom = "https://ekgn.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/";
+
+
+                    job.title    = json[i].Title;
+                    job.url      = dom+json[i].Id;
+                    job.location = json[i].PrimaryLocation;
+                    
+
+                    //job.source_jobtype = json[i].jobtypeSelector;
+                    //job.source_salary = json[i].jobtypeSelector;
+
+
+    				//job.logo = json[i].logoSelector;
+   					//job.source_empname = json[i].empnameSelector;
+                    //job.source_apply_email = json[i].emailSelector;
+    				
+    				
+    				//job.dateposted_raw = json[i].datepostedSelector;
+              
+
+
+                    /*  var fecha = json[i].
+                        fecha = fecha.split(" ")[0].split("-");
+                        job.dateposted_raw =  fecha[1]+'/'+fecha[2]+'/'+fecha[0];*/
+
+                    job.temp = 1;
+
+                    jobs.push(job);
+                }
+                cont +=24;
+            },
+            error: function (error) {
+                msg(error);
+            }
+        });
+   } while (json.length > 0);                                 // 6) condicion de parada
+
+    out["jobs"] = jobs;
+    return out;
+})();
+
+
+// jobdata  
+
+(function() {
+	var out = {};
+	var job = {};
+  	var selector = 'div[class="details"]';
+  	var remove_selectors = ['a'];
+  	//var job = pass_it["job"];
+	
+    
+	var full_html = document.querySelector(selector);
+  if(full_html){   //VALIDAR SI DESCRIPCION NO ES NULL
+
+  	// remove something from the jobdatata
+
+	  if (remove_selectors.length > 0) remove_selectors.forEach(remove_selector => {if(full_html.querySelector(remove_selector)) 	full_html.querySelector(remove_selector).remove();});
+  	if (typeof cleanHTML == "undefined") cleanHTML = function(x){return x};
+  	if (typeof msg == "undefined") msg = console.log;
+
+ 
+   /*LOCATION*/
+   //job.location = contains('Selector','Palabra',full_html);
+   //job.location = full_html.querySelector('').textContent.trim()
+
+   /*JOBTYPE*/
+	 //job.source_jobtype = contains('Selector','Palabra',full_html);
+   //job.source_jobtype = full_html.querySelector('').textContent.trim()
+
+   /*SALARY*/
+   //job.source_salary = contains('Selector','Palabra',full_html);
+   //job.source_salary = full_html.querySelector('').textContent.trim()
+
+   /*DATEPOSTED*/
+	 //job.dateposted_raw = cambiofecha(contains('Selector','Palabra',full_html),' ',1,0,2);
+
+   /*DATECLOSED*/
+    //job.dateclosed_raw = cambiofecha(contains('Selector','Palabra',full_html),' ',1,0,2);
+
+//REMOVER SELECTORES
+//===================
+removeSelector('script, style, a, img',document);
+//removeSelector('selector1, selector2,selectorN',document);
+//removeSelector('selector1, selector2,selectorN',document);
+
+
+//REMOVER SELECTORES POR TEXTO
+//=============================
+//removeTextSelector('texto_a_buscar1\\:selector1,texto_a_buscar2\\:selector2...texto_a_buscarN\\:selectorN')
+//removeTextSelector('texto_a_buscar1\\:selector1,texto_a_buscar2\\:selector2...texto_a_buscarN\\:selectorN')  
+
+
+	job.html 	    = full_html.innerHTML.trim();
+	job.jobdesc 	= full_html.innerHTML.trim();
+
+//REPLACE ELIMINAR URL
+//======================
+//job.html = job.html.replace(/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi,'');
+
+//OBTENER EMAIL DE APPLY
+//=======================
+//if(html_2.search(/([a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9_-]+)/gi) > -1){
+//  job.source_apply_email = html_2.match(/([a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+\.[a-zA-Z0-9_-]+)/gi)[0];
+//}
+
+
+// --------------- removeTextBefore -----------
+job.html = removeTextBefore(job.html, "Job Description", false);
+//job.html = removeTextBefore(job.html, "", false);
+//job.html = removeTextBefore(job.html, "", false);
+//job.html = removeTextBefore(job.html, "", false);
+
+// ------------ -- removeTextAfter -----------
+job.html = removeTextAfter(job.html, "This announcement ", true);
+job.html = removeTextAfter(job.html, "Il presente annuncio", true);
+job.html = removeTextAfter(job.html, "Altre informazioni", true);
+job.html = removeTextAfter(job.html, "La ricerca è aperta", true);
+
+//-----------------FILTRADO POR SPLIT----------------
+//job.html 		= job.html.split('')[0];
+//job.html 		= job.html.split('')[0];
+//job.html 		= job.html.split('')[0];
+//job.html 		= job.html.split('')[0];
+//job.html 		= job.html.split('')[0];
+//job.html 		= job.html.split('')[0];
+
+job.html        = cleanHTML(job.html);
+job.jobdesc     = job.html.replace(/&nbsp;/g," ").replace(/\<(.*?)\>/g, ""); // clean tags
+job.jobdesc     = cleanHTML(job.jobdesc);
+
+//desactivar jobs con descripcion menor a 50 caracteres
+if (job.jobdesc.length < 50){
+    job.flag_active=0;
+}
+}else{
+	job.html 		= '';   //SI DESCRIPCION ES NULL SE LE ASIGNA CERO(0) CARACTERES
+	job.jobdesc 	= '';
+	job.flag_active=0;
+}
+
+
+	out["job"] = job;
+	return out;
+  
+   
+})();
+
+ function removeTextBefore(html, text, flag) {
+      var newHtml = html;
+      if (newHtml.indexOf(text) > -1) {
+        newHtml = newHtml.split(text).pop();
+        if (!flag) {
+          newHtml = "<h3>" + text + "</h3>" + newHtml;
+        }  		
+      }
+      return newHtml;
+    }
+
+    function removeTextAfter(html, text, flag) {
+      var newHtml = html;
+      if (newHtml.indexOf(text) > -1) {
+        newHtml = newHtml.split(text).shift();
+        if (!flag) {
+          newHtml = newHtml + "<p>" + text + "</p>";
+        }  		
+      }
+      return newHtml;
+    }
+
+function contains(selector,texto,elements){
+  let resultado ='';  
+  elements.querySelectorAll(selector).forEach(function(elemento){if(RegExp(texto).test(elemento.innerText)){resultado =elemento.textContent}})
+  return resultado;
+}    
+
+function removeTextSelector(textSelector,elements){
+  let selectors = textSelector.split(',');
+  selectors.forEach(function(selector){
+  let text = selector.split('\\:').shift(); let itemselec = selector.split('\\:').pop();
+    elements.querySelectorAll(itemselec).forEach(function(elem){RegExp(text).test(elem.innerText)?elem.remove():null})})
+}
+
+function removeSelector(selectorDom, elements){
+  selectorDom.split(',').forEach(selector=>{elements.querySelectorAll(selector).forEach(function(elem){elem.remove()})})
+}
+
+function cambiofecha(get_date, sC, pMes, pDia, pAno) {  //Ingreso Strin con fecha;caracter separador;posicion Mes, Dia y Año
+   get_date = get_date.trim();
+   var monthJob = get_date.split(sC)[pMes].substring(0,3).trim().toLowerCase();
+   var dia = parseInt(get_date.split(sC)[pDia],10); dia = dia<10?'0'+dia:dia;
+   var dateEN = {"jan":"01","feb":"02","mar":"03","apr":"04","may":"05","jun":"06","jul":"07","aug":"08","sep":"09","oct":"10","nov":"11","dec":"12"}
+   typeof dateEN[monthJob]!='undefined'?monthJob = dateEN[monthJob]:monthJob= parseInt(monthJob,10)<10?'0'+monthJob:monthJob;
+  return monthJob+"/"+dia+"/"+get_date.split(sC)[pAno].trim();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

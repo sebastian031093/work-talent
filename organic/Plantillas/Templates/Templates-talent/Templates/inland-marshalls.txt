@@ -1,0 +1,158 @@
+https://marshalls.livevacancies.co.uk/#/
+
+//Infinite pagination
+(function() {
+	var out = {};
+  	out["has_next_page"] = false;
+  	out.waitFor = "";
+  	out.wait = true;
+  	out.pic = true;
+    return out;
+})();
+
+//Before extract
+(function() {
+	let out = {};
+    let selectorJobs = "div.layout div.v-card__text";
+    let selectorDescription = "div.flex.my-1.xs12 div.jk--text--text";
+  
+  	let elem 
+
+  
+	if (typeof pass_it == "undefined") 
+      pass_it = {};
+
+  	if (!pass_it["cont"]) {
+    	out["pass_it"] = {
+      		"cont": 0,
+		    "salir":false,
+          	"pagination": false,
+          	"selectorDescription": selectorDescription,
+          	"selectorJobs": selectorJobs,
+			"nextPage": 0 
+    	};
+  	} else {
+    	out["pass_it"] = pass_it;
+    }   
+  elem = document.querySelectorAll(selectorJobs)[out["pass_it"]["cont"]];
+     
+  if (elem){
+    out["pass_it"].title = elem.querySelector("div.title").textContent.trim();
+    out["pass_it"].location = elem.querySelector("div.jk--text--text.jk--job-title-text").textContent.trim();
+	
+  	elem.click();
+    out.waitFor = selectorDescription;
+	out.wait = true;
+  }
+  else{
+    msg("no hay mas jobs")
+    out["pass_it"]["salir"] = true;        
+  }
+  
+	out.pic = 1
+    return out;
+})();
+
+
+//Extract
+(function() {
+	var out = {};
+  out.html = true;
+	var jobs = [];
+  	out["pass_it"] = pass_it;
+    if (out["pass_it"]["salir"]){
+      var job = {};
+      job.title = 'holaa';
+      jobs.push(job);
+    } else {
+
+    if (document.querySelector("html")){
+      var job = {};
+      job.title = out["pass_it"]["title"]//document.querySelector("").textContent.replace(/\[.*?\]/g, '').trim();
+      job.location = out["pass_it"]["location"];//document.querySelector("").textContent.trim();
+      job.url = window.location.href;
+      job.reqid = job.url.split("details/").pop().trim();
+      job.source_jobtype = document.querySelectorAll("div.flex.jk--text--text.text-xs-left.xs12 span.v-chip__content")[0].textContent.trim();
+	  job.source_salary = document.querySelectorAll("div.flex.my-2.xs12 div:nth-child(2).jk--text--text")[1].textContent.trim();
+      
+      /*
+      for (const a of document.querySelectorAll('p')) {
+        if (a.textContent.search('@')>-1 || a.textContent.search('www')>-1){
+           a.remove();
+        } 
+      }
+      */
+
+      job.html = document.querySelector("div.flex.my-1.xs12 div.jk--text--text").innerHTML.trim();
+      
+      //job.html = removeTextBefore(job.html, 'Description', false);
+      //job.html = removeTextAfter(job.html, 'Primary Location', true);
+      //job.html = removeTextAfter(job.html, 'For more information visit', true);
+      
+      job.html      = cleanHTML(job.html);
+      var tmp       = document.createElement('div');
+      tmp.innerHTML = job.html;
+      job.jobdesc   = tmp.textContent.trim();
+      job.jobdesc   = cleanHTML(job.jobdesc);
+      
+      if(job.html < 50) {
+        job.flag_active = 0
+      }
+
+    job.temp = 1;
+    jobs.push(job);
+
+    }	
+  }
+  
+  out["jobs"] = jobs;
+	return out;
+  
+   
+})();
+
+function removeTextBefore(html, text, flag) {
+      var newHtml = html;
+      if (newHtml.indexOf(text) > -1) {
+        newHtml = newHtml.split(text).pop();
+        if (!flag) {
+          newHtml = "<h3>" + text + "</h3>" + newHtml;
+        }  		
+      }
+      return newHtml;
+}
+
+function removeTextAfter(html, text, flag) {
+      var newHtml = html;
+      if (newHtml.indexOf(text) > -1) {
+        newHtml = newHtml.split(text).shift();
+        if (!flag) {
+          newHtml = newHtml + "<p>" + text + "</p>";
+        }  		
+      }
+      return newHtml;
+ }
+
+
+//Pagination
+(function () {
+  var out = {};
+   
+    out["pass_it"] = pass_it;
+    out["pass_it"].cont += 1;
+  
+    // boton para volver a los jobs
+    if(document.querySelector("button.jk--text--text.v-btn.theme--light")) {
+    	document.querySelector("button.jk--text--text.v-btn.theme--light").click();
+    }
+  
+    if (out["pass_it"]["salir"])
+        out["has_next_page"] = false;
+    else
+        out["has_next_page"] = true;
+
+      out.waitFor = out["pass_it"]["selectorJobs"]
+  	  out.pic = true;
+      out.wait = true;
+      return out;
+})();

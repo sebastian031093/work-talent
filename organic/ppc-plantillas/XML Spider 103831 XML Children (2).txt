@@ -1,0 +1,22 @@
+$city = trim((string) $j->children('job', true)->location->municipality);
+$region = trim((string) $j->children('job', true)->location->region);
+
+$arrloc=array();
+if($city) $arrloc[] = $city;
+if($region) $arrloc[] = $region;
+$loc = implode(", ", $arrloc);
+
+$job=array();
+$job['title'] = trim((String) $j->title);
+$job['location'] = $loc;
+$job['url'] = trim((String) $j->link[href]);
+$job['logo'] = trim((String) $j->companyLogo);
+//$job['source_apply_email'] = trim((String) $j->source_apply_email);
+$job['source_empname'] = trim((String) $j->author->name);
+//$job['source_jobtype'] = trim((String) $j->jobtype);
+//$job['source_salary'] = trim((String) $j->salary);
+$job['html'] = (String) $j->content;
+$job['jobdesc'] = $job['html'];
+//$job['source_ppc'] = trim((String) $j->cpc);
+//$job['job_pixel'] = trim((String) $j->tracking_url);
+$job['temp']=1;

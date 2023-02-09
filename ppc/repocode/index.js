@@ -1,0 +1,11 @@
+'Boston, MA',
+  'Milton, MA ',
+  'Quincy, MA ',
+  'Cambridge, MA',
+  'Needham, MA',
+  'Salem, MA',
+  'Malden, MA',
+  'Medford, MA',
+  'Watertown, MA',
+  'Somerville, MA',
+  'Waltham, MA';

@@ -1,0 +1,80 @@
+$city = trim((string) $j->city);
+$state = trim((string) $j->state);
+$country = trim((string) $j->country);
+    
+$arrloc=array();
+if($city) $arrloc[] = $city;
+if($state) $arrloc[] = $state;
+if($country) $arrloc[] = $country;
+$loc = implode(", ", $arrloc);
+
+$job=array();
+$job['temp']=1;
+$job['title'] = (String) $j->title;
+$job['html']  = (String) $j->description;
+$job['jobdesc'] = $job['html'];
+$job['location'] = $loc;
+//$job['dateposted_raw'] = (String) $j->date;
+$date1 = $j->date;
+
+$clean = explode("T", $date1);
+$date = $clean[0];
+
+$date = explode("-", $date); 
+$job['dateposted_raw'] = $date[1]."/".$date[2]."/".$date[0];
+ 
+$job['source_jobtype'] = (String) $j->jobtype;
+$job['url'] = (String) $j->url;
+$job['source_empname'] = (String) $j->company;
+$job['experience_required'] = (String) $j->experience;
+$job['source_salary'] = (String) $j->salary;
+print_r($job);
+
+
+////////////////////////////////
+
+//Obtener fecha actual
+$current_date = date('Y-m-d');
+$current_date = strtotime($current_date) * 1000;
+//echo $current_date;
+
+//Fecha del trabajo
+$jobdate = trim((String) $j->pubDate);
+$valores = explode(' ', $jobdate);
+$jobdate = $valores[3]."-".$valores[2]."-".$valores[1];
+//echo 'Job Date 1:  '.$jobdate;
+$jobdate = strtotime($jobdate) * 1000;
+//echo 'Job Date:  '.$jobdate;
+
+//Fecha limite (Resta 6 meses en milisegundos a la fecha actual)
+$limit_date = $current_date - 15778500000;
+//echo 'Limit Date:  '.$limit_date;
+
+if($jobdate > $limit_date){
+
+
+  $job=array();
+  $job['temp']=1;
+$job['title'] = trim((String) $j->title);
+$job['url'] = trim((String) $j->link);
+}
+
+/////////////////////////
+Date posted raw , no filtrará nada
+
+$date = $j->date;
+$date = explode(" ", $date);
+if($date[2] == Jan){$date[2] = "01";}
+if($date[2] == Feb){$date[2] = "02";}
+if($date[2] == Mar){$date[2] = "03";}
+if($date[2] == Apr){$date[2] = "04";}
+if($date[2] == May){$date[2] = "05";}
+if($date[2] == Jun){$date[2] = "06";}
+if($date[2] == Jul){$date[2] = "07";}
+if($date[2] == Aug){$date[2] = "08";}
+if($date[2] == Sep){$date[2] = "09";}
+if($date[2] == Oct){$date[2] = "10";}
+if($date[2] == Nov){$date[2] = "11";}
+if($date[2] == Dec){$date[2] = "12";}
+
+$job['dateposted_raw'] = $date[1]."-".$date[2]."-".$date[3];

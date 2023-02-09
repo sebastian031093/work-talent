@@ -1,0 +1,61 @@
+17 мая 2019
+
+
+
+
+var aux = $(this).find('span.add-date').text().trim();
+        var month = aux.split(" ")[1];
+        var day = aux.split(" ")[0];
+        var year = aux.split(" ")[2];
+      
+      
+        if(month.indexOf("января")>-1)
+          month = 0;
+        else if(month.indexOf("февраля")>-1)
+          month = 1;
+        else if(month.indexOf("март")>-1)
+          month = 2;
+        else if(month.indexOf("апреля")>-1)
+          month = 3;
+        else if(month.indexOf("мая")>-1)
+          month = 4;
+        else if(month.indexOf("июня")>-1)
+          month = 5;
+        else if(month.indexOf("июля")>-1)
+          month = 6;
+        else if(month.indexOf("август")>-1)
+          month = 7;
+        else if(month.indexOf("сентября")>-1)
+          month = 8;
+        else if(month.indexOf("октября")>-1)
+          month = 9;
+        else if(month.indexOf("ноября")>-1)
+          month = 10;
+        else if(month.indexOf("декабря")>-1)
+          month = 11;
+
+   var   fechad = new Date();
+   var   fechaActual = [fechad.getDate(),fechad.getMonth()+1,fechad.getFullYear()];
+     
+     var fecha = true;
+         if(fechaActual[2] == year){
+           if( fechaActual[1]-month >= 6){
+             fecha=false;  
+           }
+         }else if( (fechaActual[2]-year >= 1) || ((12-month) + fechaActual[1] >= 6)){
+           fecha=false;
+         }
+     //   var fechaJob = new Date(year.trim(), month, day.trim()); // Ano, Mes (comenzando de 0) y dia numericos todos
+     //   var fechaActual = new Date();
+      //  var diasTranscurridos = fechaActual.getTime() - fechaJob.getTime();
+     //   diasTranscurridos = diasTranscurridos/86400000; //Asi calculas la cantidad de dias,  86.400.000 (1.000 milisegundos x 60 segundos x 60 minutos x 24 horas).
+     //   if(diasTranscurridos < 180 ){
+           if(fecha){
+           page.pagejobs.push(job);
+         }
+       /* }else{
+          boo.msg('[W] Job Expirado');
+          continueCheck = false;
+        }*/
+	});/*loop-end*/
+	/*extract-end*/

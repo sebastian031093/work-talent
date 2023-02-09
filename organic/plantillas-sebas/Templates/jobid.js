@@ -1,0 +1,1 @@
+job.jobid = MD5(job.title + job.location + job.temp);

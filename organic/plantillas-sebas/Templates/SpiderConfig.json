@@ -1,0 +1,11 @@
+{
+    "options": {
+        "inactivateJQuery": false,
+        "ignoreLoadErrors": false,
+        "waitForPageLoadEvent": true,
+        "waitForResources": true
+    },
+    "noimage": true,
+    "skipResources": false,
+    "noUnnecessaryResources": false
+}

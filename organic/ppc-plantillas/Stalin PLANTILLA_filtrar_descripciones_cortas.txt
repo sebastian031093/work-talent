@@ -1,0 +1,28 @@
+
+$html = (String) $j->description;
+
+if(strlen(trim((String)$html)) > 200){ 
+
+$city = trim((string) $j->city);
+$state = trim((string) $j->state);
+$country = trim((string) $j->country);
+
+$arrloc=array();
+if($city) $arrloc[] = $city;
+if($state) $arrloc[] = $state;
+if($country) $arrloc[] = $country;
+$loc = implode(", ", $arrloc);
+
+$job=array();
+
+$job['title'] = trim((String) $j->title);
+$job['location'] = $loc;
+$job['source_empname'] = trim((String) $j->company);
+$job['source_salary'] = trim((String) $j->salary);
+$job['source_jobtype'] = trim((String) $j->jobtype);
+$job['url'] = trim((String) $j->url);
+$job['logo'] = trim((String) $j->logo);
+$job['html'] = (String) $j->$html; 
+$job['jobdesc'] = strip_tags($job["html"]);
+$job['temp']=12;
+}

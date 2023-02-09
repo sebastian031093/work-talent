@@ -1,0 +1,53 @@
+//scanid 159258
+//https://bossjob.ph/jobs.xml  web 
+//$title = trim((String) $j->title);
+//$url = trim((String) $j->url);
+$empname = trim((String) $j->company);
+
+if(strpos(strtoupper($empname), 'MOMMY JOBS ONLINE')===false ){
+
+  $city = trim((string) $j->location);
+  $state = trim((string) $j->state);
+  $country = trim((string) $j->country);
+
+  $arrloc=array();
+  if($city) $arrloc[] = $city;
+  if($state) $arrloc[] = $state;
+  if($country) $arrloc[] = $country;
+  if($country===""){$country="PH ";}
+  $loc = implode(", ", $arrloc);
+  $del = array("/<\/?[^>]+(>|$)/i");
+ 
+  $job=array();
+
+  $job['title'] = trim((String) $j->title);
+  $job['title'] = preg_replace('/&amp;|,/i',"&",$job['title']);
+  $loc = str_replace("Overseas, ","",$loc);
+  $job['location'] = $loc;
+  $job['location'] = preg_replace('/City of/i',"",$job['location']);
+  //$job['location'] = preg_replace('/ and /i',",NO/",$job['location']);
+  //$multilocation = "/";
+  $job['url'] = trim((String) $j->url);
+  $job['url'] =  $job['url']."?utm_source=neuvoo&utm_campaign=neuvoo";
+  $job['source_salary'] = trim((String) $j->salary);
+  $job['source_empname'] = trim((String) $j->company);
+  $job['source_empname'] = preg_replace('/&amp;/i',"",$job['source_empname']);
+  if(strpos(strtoupper($job['source_empname']),"CONFIDENTIAL")=== true){
+    $job['source_empname'] = "";
+  }
+  $job['source_jobtype'] = trim((string) $j->jobtype);
+  $job['html'] = (String) $j->description;
+  $job['html'] = preg_replace("/Job Description/i","<br>Job Description<br>", $job['html']);
+  $job['jobdesc'] = $job['html'];
+  
+  
+  if(strpos(strtoupper($job['title']), 'EXECUTIVE ASSISTANT')!==false &&
+    strpos($job['url'],'Executive-Assistant-21850')!==false){
+    $job['google_error'] = 1;
+    //print_r($job);
+  // echo "LO CONSEGUIIIII";
+  }
+
+  $job['temp']=2;
+  //print_r($job);
+}

@@ -1,0 +1,262 @@
+﻿// Fecha Frances
+
+function dateFormat(fecha){
+  var dateParts = [];
+ // fecha = fecha.replace("th", "");
+  if(fecha.indexOf("/")>-1){
+      dateParts = fecha.split("/");
+  }
+  var day = parseInt(dateParts[0]);
+  var month = dateParts[1];
+
+ 
+
+  if(month == 'déc'){
+      month = "12"
+  }else if(month == 'janv'){
+      month = "01"
+  }else if(month == 'févr'){
+  month = "02"
+  }else if(month == 'mars'){
+  month = "03"
+  }else if(month == 'avr'){
+  month = "04"
+  }else if(month == 'mai'){
+  month = "05"
+  }else if(month == 'juin'){
+  month = "06"
+  }else if(month == 'juil'){
+  month = "07"
+  }else if(month == 'août'){
+  month = "08"
+  }else if(month == 'sept'){
+  month = "09"
+  }else if(month == 'oct'){
+  month = "10"
+  }else if(month == 'nov'){
+  month = "11"
+  }
+
+ 
+
+  var year = dateParts[2];
+
+ 
+
+  var fechaFinal = month + "/" + day + "/" + year;
+
+ 
+
+  return fechaFinal;
+
+ 
+
+}
+
+
+//
+
+function dateFormat(fecha){
+  var dateParts = [];
+  fecha = fecha.replace("th", "");
+  if(fecha.indexOf(" ")>-1){
+      dateParts = fecha.split(" ");
+  }
+  var day = parseInt(dateParts[0]);
+  var month = dateParts[1];
+
+ 
+
+  if(month == 'Dec'){
+      month = "12"
+  }else if(month == 'Jan'){
+      month = "01"
+  }else if(month == 'Feb'){
+  month = "02"
+  }else if(month == 'Mar'){
+  month = "03"
+  }else if(month == 'Apr'){
+  month = "04"
+  }else if(month == 'May'){
+  month = "05"
+  }else if(month == 'Jun'){
+  month = "06"
+  }else if(month == 'Jul'){
+  month = "07"
+  }else if(month == 'Aug'){
+  month = "08"
+  }else if(month == 'Sep'){
+  month = "09"
+  }else if(month == 'Oct'){
+  month = "10"
+  }else if(month == 'Nov'){
+  month = "11"
+  }
+
+ 
+
+  var year = dateParts[2];
+
+ 
+
+  var fechaFinal = month + "/" + day + "/" + year;
+
+ 
+
+  return fechaFinal;
+
+ 
+
+}
+
+
+
+
+///////////////////////
+
+
+
+
+function dateFormat(fecha){
+  var dateParts = [];
+  fecha = fecha.replace("th", "");
+  if(fecha.indexOf(" ")>-1){
+      dateParts = fecha.split(" ");
+  }
+  var day = parseInt(dateParts[1]);
+  var month = dateParts[0]; 
+  var year = dateParts[2];
+ 
+ if (month.toUpperCase().indexOf('JAN')>-1) {month = "01";}
+ if (month.toUpperCase().indexOf('FEB')>-1) {month = "02";}
+ if (month.toUpperCase().indexOf('MAR')>-1) {month = "03";}
+ if (month.toUpperCase().indexOf('APR')>-1) {month = "04";}
+ if (month.toUpperCase().indexOf('MAY')>-1) {month = "05";}
+ if (month.toUpperCase().indexOf('JUN')>-1) {month = "06";}
+ if (month.toUpperCase().indexOf('JUL')>-1) {month = "07";}
+ if (month.toUpperCase().indexOf('AUG')>-1) {month = "08";}
+ if (month.toUpperCase().indexOf('SEP')>-1) {month = "09";}
+ if (month.toUpperCase().indexOf('OCT')>-1) {month = "10";}
+ if (month.toUpperCase().indexOf('NOV')>-1) {month = "11";}
+ if (month.toUpperCase().indexOf('DEC')>-1) {month = "12";}
+  
+  var fechaFinal = month + "/" + day + "/" + year; 
+  return fechaFinal;
+
+ 
+
+}
+
+//  fecha Portugues
+
+
+function dateFormat(fecha){
+  var dateParts = [];
+ 
+  if(fecha.indexOf("/")>-1){
+      dateParts = fecha.split("/");
+  }
+  
+  var day = parseInt(dateParts[1]);
+  var month = dateParts[0]; 
+  var year = dateParts[2];
+ 
+ if (month.toUpperCase().indexOf('JANE')>-1) {month = "01";}
+ if (month.toUpperCase().indexOf('FEVE')>-1) {month = "02";}
+ if (month.toUpperCase().indexOf('MAR')>-1) {month = "03";}
+ if (month.toUpperCase().indexOf('ABR')>-1) {month = "04";}
+ if (month.toUpperCase().indexOf('MAI')>-1) {month = "05";}
+ if (month.toUpperCase().indexOf('JUNH')>-1) {month = "06";}
+ if (month.toUpperCase().indexOf('JUL')>-1) {month = "07";}
+ if (month.toUpperCase().indexOf('AGOS')>-1) {month = "08";}
+ if (month.toUpperCase().indexOf('SETEM')>-1) {month = "09";}
+ if (month.toUpperCase().indexOf('OUTU')>-1) {month = "10";}
+ if (month.toUpperCase().indexOf('NOVE')>-1) {month = "11";}
+ if (month.toUpperCase().indexOf('DEZ')>-1) {month = "12";}
+  
+  var fechaFinal = month + "/" + day + "/" + year; 
+  return fechaFinal;
+
+ 
+
+}
+
+///////////////
+
+function getDateFormat(dateRaw, cut, dayPosition, monthPosition, yearPosition) {
+       dateRaw = dateRaw.replace(/\,/g,"").trim();
+          
+        let day   =  dateRaw.split(cut)[dayPosition].trim(), 
+            month =  dateRaw.split(cut)[monthPosition].trim(), 
+            year  = dateRaw.split(cut)[yearPosition].trim();
+
+          if(dateRaw.search(/[a-z]/gi)>-1){ 
+            if(month.search(/jan/i)>-1){month = "01";}
+            if(month.search(/feb/i)>-1){month = "02";}
+            if(month.search(/mar/i)>-1){month = "03";}
+            if(month.search(/apr/i)>-1){month = "04";}
+            if(month.search(/may/i)>-1){month = "05";}
+            if(month.search(/jun/i)>-1){month = "06";}
+            if(month.search(/jul/i)>-1){month = "07";}
+            if(month.search(/aug/i)>-1){month = "08";}
+            if(month.search(/sep/i)>-1){month = "09";}
+            if(month.search(/oct/i)>-1){month = "10";}
+            if(month.search(/nov/i)>-1){month = "11";}
+            if(month.search(/dec/i)>-1){month = "12";}
+          }
+   var datum = month +"/"+  day +"/"+ year;
+     return datum;
+  }
+
+///////////////////////
+
+
+function date(fecha, separador, day, month, year, eliminar, idioma, flag3) {
+    var get_date1 = fecha.replace(eliminar,"");
+    if(flag3 === true){
+      switch(idioma) {
+        case "fr":
+          get_date1=get_date1.toLowerCase().replace("jan","01").replace("fév","02").replace("mar","03");
+          get_date1=get_date1.toLowerCase().replace("avr","04").replace("mai","05").replace("jui","06");
+          get_date1=get_date1.toLowerCase().replace("jui","07").replace("aoû","08").replace("sep","09");
+          get_date1=get_date1.toLowerCase().replace("oct","10").replace("nov","11").replace("dec","12");
+          break;
+        case "es":
+          get_date1=get_date1.toLowerCase().replace("ene","01").replace("feb","02").replace("mar","03");
+          get_date1=get_date1.toLowerCase().replace("abr","04").replace("may","05").replace("jun","06");
+          get_date1=get_date1.toLowerCase().replace("jul","07").replace("ago","08").replace("sep","09");
+          get_date1=get_date1.toLowerCase().replace("oct","10").replace("nov","11").replace("dic","12");
+          break;
+        default:
+          get_date1=get_date1.toLowerCase().replace("jan","01").replace("feb","02").replace("mar","03");
+          get_date1=get_date1.toLowerCase().replace("apr","04").replace("may","05").replace("jun","06");
+          get_date1=get_date1.toLowerCase().replace("jul","07").replace("aug","08").replace("sep","09");
+          get_date1=get_date1.toLowerCase().replace("oct","10").replace("nov","11").replace("dec","12");
+      }
+    } else {
+      switch(idioma) {
+        case "fr":
+          get_date1=get_date1.toLowerCase().replace("janvier","01").replace("février","02").replace("mars","03");
+          get_date1=get_date1.toLowerCase().replace("avril","04").replace("mai","05").replace("juin","06");
+          get_date1=get_date1.toLowerCase().replace("juillet","07").replace("août","08").replace("septembre","09");
+          get_date1=get_date1.toLowerCase().replace("octobre","10").replace("novembre","11").replace("decembre","12");
+          break;
+        case "es":
+          get_date1=get_date1.toLowerCase().replace("enero","01").replace("febrero","02").replace("marzo","03");
+          get_date1=get_date1.toLowerCase().replace("abril","04").replace("mayo","05").replace("junio","06");
+          get_date1=get_date1.toLowerCase().replace("julio","07").replace("agosto","08").replace("septiembre","09");
+          get_date1=get_date1.toLowerCase().replace("octubre","10").replace("noviembre","11").replace("diciembre","12");
+          break;
+        default:
+          get_date1=get_date1.toLowerCase().replace("january","01").replace("february","02").replace("march","03");
+          get_date1=get_date1.toLowerCase().replace("april","04").replace("may","05").replace("june","06");
+          get_date1=get_date1.toLowerCase().replace("july","07").replace("august","08").replace("september","09");
+          get_date1=get_date1.toLowerCase().replace("october","10").replace("november","11").replace("december","12");
+      }
+    }
+    get_date1 = get_date1.split(separador)[month] + '/' + get_date1.split(separador)[day] + '/' +get_date1.split(separador)[year];
+    return get_date1;
+  }
+
+
+

@@ -1,0 +1,26 @@
+///////////////////destructurin obj////////////////////////
+http://index01.neuvoo.com/boo3-web/spider/add-step.php?style=dark&id=231571
+https://talent.com/private/tools/content/scraper/spiderCodeTool.php?scanid=213702 normal code ajax
+
+///////////////////////multiloc childres//////////////////////////////
+https://talent.com/private/tools/content/scraper/spiderCodeTool.php?scanid=69653
+
+/////////////////////////optional chaning validation/////////////////
+https://talent.com/private/tools/jobs/pageNewScanidView.php?scanid=194396
+
+////////scanid para aplicar async///////////////////
+https://talent.com/private/tools/content/scraper/spiderCodeTool.php?scanid=74132 normal code - se cambio el codigo
+https://talent.com/private/tools/content/scraper/spiderCodeTool.php?scanid=45344 normal code
+https://talent.com/private/tools/content/scraper/spiderCodeTool.php?scanid=74298 normal code
+https://talent.com/private/tools/jobs/pageNewScanidView.php?scanid=116639 async code
+https://talent.com/private/tools/content/scraper/spiderCodeTool.php?scanid=121046 normal code
+
+
+
+///////////////////////posibles fallas//////////////////////////////
+https://talent.com/private/tools/jobs/pageNewScanidView.php?scanid=107102
+https://prnt.sc/CpqEM_v-dYiC
+https://prnt.sc/kdRQQEGZJJqB
+https://talent.com/private/tools/content/scraper/spiderCodeTool.php?scanid=7146
+
+

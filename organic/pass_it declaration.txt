@@ -1,0 +1,9 @@
+(function() {
+    var out = {};
+    out["pass_it"] = {
+        counter: 1,
+        stop: 0,
+        arr: 0
+    };
+    return out;
+})();

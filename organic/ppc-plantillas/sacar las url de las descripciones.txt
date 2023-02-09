@@ -1,0 +1,66 @@
+//Datos de excepciones se obtienen de arreglo $exceptions definido en feed manager que a su vez obtiene sus valores para este empcode desde:
+//http://beta.neuvoo.com/xml-spiders/services/get-feed-exception.php?empcode=bebee-gb
+//Para agregar o quitar Excepciones ir a http://beta.neuvoo.com/xml-spiders/view/manage-exceptions.php?id=161062
+
+//$exceptions = file_get_contents("http://beta.neuvoo.com/xml-spiders/services/get-feed-exception.php?empcode=".$empcode);
+//$exceptions = json_decode($exceptions,true);
+$url = trim((String) $j->url);
+$empname = trim((String) $j->company);
+
+$empnamefound = preg_match('/('.$exceptions['array']['company']['value'].')/ui', $empname);//Match de empnames a excluir: 1 = encontrado; 0 = no encontrado
+
+if($empnamefound === 0){
+  /*
+if(strpos(strtoupper($empname), 'UBER')===false &&
+   strpos(strtoupper($empname), 'ROBERTSON CONSTRUCTION COMPANY')===false &&
+   strpos(strtoupper($empname), 'ALIXPARTNERS')===false &&
+   strpos(strtoupper($empname), 'HOLIDAY INN')===false &&
+   strpos(strtoupper($empname), 'CROWNE PLAZA')===false &&
+   strpos(strtoupper($empname), 'INTERCONTINENTAL HOTELS GROUP')===false &&
+   strpos(strtoupper($empname), 'IHG')===false &&
+   strpos(strtoupper($empname), 'FRANK RECRUITMENT')===false &&
+   strpos(strtoupper($empname), 'NIGEL FRANK')===false &&
+   strpos(strtoupper($empname), 'FRG CONSULTING')===false &&
+   strpos(strtoupper($empname), 'ACURIS')===false &&
+   strpos(strtoupper($empname), 'ACAST')===false){*/
+  if(strpos(strtoupper($empname), 'TAILS.COM')===false){
+  $city = trim((string) $j->city);
+  $state = trim((string) $j->region);
+  $country = trim((string) $j->country);
+
+  $arrloc=array();
+  if($city) $arrloc[] = $city;
+  if($state) $arrloc[] = $state;
+  if($country) $arrloc[] = $country;
+  $loc = implode(", ", $arrloc);
+if(strpos(strtoupper($url), 'EXCELLGROUPLTD')===false &&
+  strpos(strtoupper($url), 'ENGIL')===false &&
+  strpos(strtoupper($url), 'ANGLOAMERICAN')===false){
+  $job=array();
+
+  $job['title'] = trim((String) $j->title);
+  $job['location'] = $loc;
+  $job['location'] = str_replace(', FIELD & STORES', '', $job['location']);
+  $job['location'] = str_replace('OFFICE', '', $job['location']);
+  $job['location'] = str_replace('0, NFK, GB,', '', $job['location']);
+  $job['location'] = str_replace('UK-LANARKSHIRE-', '', $job['location']);
+  $job['location'] = str_replace('EDINBURGH PARK, GB', 'EDINBURGH, SCOTLAND', $job['location']);
+  $job['source_empname'] = $empname;
+  $job['logo'] = trim((String) $j->logo);
+  $job['url'] = trim((String) $j->url);
+  $texto = (String) $j->content;
+  if(strpos($texto, '@')>0){
+  $pattern = '/[a-z0-9_\-\+\.]+@[a-z0-9\-]+\.([a-z]{2,4})(?:\.[a-z]{2})?/i';
+  //preg_match_all($pattern, $texto, $matches);
+  //$mail = explode("|",implode("|",$matches[0]))[0];
+  preg_match($pattern, $texto, $matches);
+  $mail = $matches[0];
+  $job['source_apply_email'] = $mail;
+  }
+  $job['html'] = (String) $j->content;
+  $job['jobdesc'] = $job['html'];
+
+  $job['temp']=1;
+}
+}
+}

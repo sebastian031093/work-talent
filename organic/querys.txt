@@ -1,0 +1,26 @@
+empname_raw:\”Confidential\”
+AND title:\"Safety manager\"
+AND flag_active:1 AND title:* Premium Job* 
+AND jobdesc: \"iframe\"
+AND jobdesc: \"undefined\"  
+AND jobdesc: \"null\"   AND
+AND jobdesc: \"null\"
+AND empname: \"Confidential\"  
+AND empname: \"Confidential\"
+AND -title:* 
+AND jobdesc: \"facebook\" 
+AND title: \"www\" 
+AND title: \"www\"
+AND -empname:* 
+AND -empname:*
+flag_active:1 AND geo_city:\"Quebéc\" AND link:*indeed* //Para buscar jobs en una ciudad que tengan en el link la palabra indeed
+ AND geo_city:\"Quebéc\"
+flag_active:1 AND link:*undefined* //Para buscar links con la palabra undefined que esten malos
+ AND link:*undefined*
+para errores de FH e
+AND flag_html:e  
+H: title: \"ref\"  AND flag_active:1 AND geo_country:ch
+US: title: \"ref\"  AND flag_active:1 AND geo_country:us 
+flag_active:1 AND location:posted 
+flag_active:1 AND location:title 
+AND flag_html:e

@@ -1,0 +1,2 @@
+document.querySelector('select[id="requisitionListInterface.dropListSize"] option:last-child').selected = true;
+document.querySelector('select[id="requisitionListInterface.dropListSize"] option:last-child').dispatchEvent(new Event('change', { bubbles: true }));

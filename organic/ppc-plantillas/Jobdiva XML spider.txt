@@ -1,0 +1,20 @@
+//https://www2.jobdiva.com/employers/connect/listofportaljobs.jsp?a=hdjdnwt3oqdy1dsj4sou8i7vyoimqj03bekdzg89i3qyi2p5pohpfah42mexnfsd&compid=0#/
+
+
+$city = trim((string) $j->city);
+$state = trim((string) $j->state);
+$country = trim((string) $j->country);
+    
+$arrloc=array();
+if($city) $arrloc[] = $city;
+if($state) $arrloc[] = $state;
+if($country) $arrloc[] = $country;
+$loc = implode(", ", $arrloc);
+
+$job=array();
+$job['temp']=90809;
+$job['title'] = trim((String) $j->title);
+$job['html'] = $j->jobdescription_400char;
+$job['jobdesc'] = $job['html'];
+$job['location'] = $loc;
+$job['url'] = (String) $j->portal_url;

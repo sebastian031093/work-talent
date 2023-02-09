@@ -1,0 +1,101 @@
+//https://vieclam.homecredit.vn/positions?limit=12
+
+
+(function () {
+        var jobs = [];
+        var out = {};
+        var cont = 12;
+//var cuentaJobs=0;
+  		var total = 0;
+        var json;
+        var token = document.querySelector("#main > section.main-content-section > div > div > div > section > div.position-filter-items > span.position-filter-item.position-filter-all-positions.active > span.position-filter-span").innerHTML;
+        msg('Total de jobs: '+token) 
+  
+       var seguir = true;
+   
+       do {
+         var data =  "limit="+cont;
+ 		  //Para la 1era pagina se envia esta data
+  		 //Para el resto se envia esta data
+         $.ajax({
+            url: 'https://vieclam.homecredit.vn/positionsByCategory?limit='+cont,                                            // 1) url
+            headers: {                                                      
+              "accept": "application/json, text/javascript, */*; q=0.01"
+             // "Content-Type": "application/json; charset=utf-8"    // 2) headers
+            },
+            type: 'GET',                                        // 3) tipo
+            // 4) data que retorna
+            data: data,
+            //data: JSON.stringify(data),
+            async: false,
+            success: function (result) {
+              msg("\x1b[45m loading jobs...");
+       			//msg(result);
+              var html_jobs = document.createElement('div');
+              //d.htmlData
+              html_jobs.innerHTML = result.html;
+              
+              var stop = html_jobs.querySelectorAll('article[class="position"]');
+              total= stop.length;
+              msg(total);
+             
+              //total = parseInt(html_jobs.querySelector('div#totalResultsFromAjax').textContent.trim(),10);
+              msg('CANTIDAD DE JOBS: '+stop.length) 
+              
+              
+              
+               //if (stop.length == stop.length && stop.length == stop.length){
+              //  seguir = false;
+             // }
+       		  
+              var json =  html_jobs.querySelectorAll('article[class="position"]');
+               
+       
+              //msg(json.length);
+              for (var i = 0; i < json.length; i++) {
+                var job = {};
+                job.title = json[i].querySelector('a').textContent.trim();
+                  job.location = "Ho Chi Minh, Vietnam"; 
+                //var reqid = json[i].querySelector('div.col5').textContent.trim();
+                job.url = json[i].querySelector('a').href.trim();
+                //job.logo = json[i].;
+                //job.source_apply_email = json[i].;
+                //job.source_empname = json[i].;
+                //job.source_jobtype = json[i].;
+                //job.source_salary = json[i].;
+                // job.dateposted_raw = cambiofecha(json[i].querySelector('span.date').textContent.trim().replace(',',''),' ',0,1,2);
+                 
+                //job.dateclosed_raw = json[i].;
+                /*  var fecha = json[i].
+                                          fecha = fecha.split(" ")[0].split("-");
+                                          job.dateposted_raw =  fecha[1]+'/'+fecha[2]+'/'+fecha[0];*/
+                job.temp = 2;
+
+                    jobs.push(job);
+               
+                //cuentaJobs++;					//CUENTA LA CANTIDAD DE JOBS PROCESADOS
+              }
+               cont +=6;
+            },
+            error: function (error) {
+              msg(error);
+            }
+          });
+        // } while (seguir);//(cuentaJobs < total);                                 // CONDICION DE PARADA
+         } while (total < token);  
+        //out["pass_it"]["heights"].push(document.querySelectorAll('article[class="position"]').length);//Selector de los JOBS
+        out["jobs"] = jobs;
+        return out;
+      })();
+
+
+function cambiofecha(get_date, sC, pMes, pDia, pAno) {  //Ingreso Strin con fecha;caracter separador;posicion Mes, Dia y Año
+   get_date = get_date.trim();
+   var monthJob = get_date.split(sC)[pMes].substring(0,3).trim().toLowerCase();
+   var dia = parseInt(get_date.split(sC)[pDia],10); dia = dia<10?'0'+dia:dia;
+   var dateEN = {"jan":"01","feb":"02","mar":"03","apr":"04","may":"05","jun":"06","jul":"07","aug":"08","sep":"09","oct":"10","nov":"11","dec":"12"}
+   typeof dateEN[monthJob]!='undefined'?monthJob = dateEN[monthJob]:monthJob= parseInt(monthJob,10)<10?'0'+monthJob:monthJob;
+  return monthJob+"/"+dia+"/"+get_date.split(sC)[pAno].trim();
+}
+
+ 

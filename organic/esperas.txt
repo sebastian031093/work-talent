@@ -1,0 +1,76 @@
+(function() {
+var out = {};
+out["html"] = true;
+out["pic"] = true;
+out.waitFor = "";
+return out;
+})();
+
+////////espera completas.
+(function () {
+
+  var out = {};
+
+  out.waitFor = '';
+
+  //out["wait"] = true;
+
+  //out.html = true
+
+  //out["pic"] = true;
+
+  //out["wait"] = 200;
+
+  //out.iframeSelector = '';
+
+  //out.iframeWaitFor = '';
+
+  //location.reload(); // Refresh
+
+  return out;
+
+})();
+
+////////iframe
+(function() {
+	var out = {};
+  	out.iframeSelector = ""
+  	out.iframeWaitFor = ""
+    return out;
+})();
+
+
+
+//redirec iframe
+(()=> {
+    const out = {
+        pass_it: {
+            redirect: false
+        }
+    }
+    return out;
+})()
+
+(function() {
+	const out = {pass_it};
+	if (!out['pass_it'].redirect) {
+        out['pass_it'].redirect = true;
+        window.location.href = document.querySelector('iframe.umantisIFrame').getAttribute('src');
+	}
+    out.waitFor = ".tableaslist_paging_bottom"
+    //out.waitFor = "tr[class*='tableaslist_contentrow'] .HSTableLinkSubTitle"
+//   	out.iframeSelector = "iframe.umantisIFrame";
+//   	out.iframeWaitFor = "tr[class*='tableaslist_contentrow']"
+    return out;
+})();
+
+//experimento
+https://talent.com/private/tools/jobs/pageNewScanidView.php?scanid=259523
+https://talent.com/private/tools/jobs/pageNewScanidView.php?scanid=141764
+
+//mejoras
+https://talent.com/private/tools/jobs/pageNewScanidView.php?scanid=214876
+https://talent.com/private/tools/jobs/pageNewScanidView.php?scanid=229895
+
+
+

@@ -1,0 +1,33 @@
+//http://careers.giorgioarmani.com/pcrbin/reg5.aspx?username=PUBLIC&I=&I=SEARCH&morecount=40%24%242%24%2420%24%240&savechecks=&sortorder=&unifiedsearch=||RC||mM2Cq1lIdO%2B1x%2Fm8SOgoTwWm3dbBTnGMwQfALMjuCRCUn46Qh%2FTy9rMoCtfbXzkH4O4aFr2FXBcKZJr%2FwPs6G9zsxHRRJvvvwuvdKYu3D4HycOho3jmDXQoYs0xHJE00GsJSXIKP%2FpuyVBmMl%2BWB%2BO31gQQKY7cr7Q4eowB%2BNQJyR1oYBonUFevY1eadKDqmLtwnadBDJjJfaKxIShcGLdZ1z99XZJd5KRID387Ac4uUbNur2gIwTSHljmeKTZMjiHEDCT8gsZ7NjiXPFJer%2BLpCVxdCpww6JezwwlKy6xNI3FnVZLbFYq29orWzhrPH7O7swpXcaaSgK1vuPnoAjaoEQgsHOCDEYJlSkB1wfNKhLSE%2FsbzQxOYMc%2BwFVB31zqh0rpK7PI4TD95iFQcwpQygSkmvbqylAQYpoxcasTpEJ2XWl0MNj3b8gY3Og9zxafzM7umtro3F6vY0YNAsRunWWxFs2sLaYA9WYjkNa19Vy2i7&p6=0&p7=0&p8=0&p9=0&keyword=&searchdropstate=&sort=Positions.Job_Title%20Asc&pcr-id=fGdpb3JnaW9hcm1hbmljb3JwLlP%2B3%2BncKJjoHNLpKoXnZTVFLB5Uy9hPaAjfr638JL2xUlujLzevgAp3eLPaw3Mln%2FP%2F3cNeN7IERaiRyNzpPOZnSosxLCZLKGwKoVyyqOr0wgWPHZ1syrz3Kx%2Bts%2Bi7s01qt0zl6KmK4bMURtuBT7NIJ1nSI5PGWg%3D%3D&rss=Y&feedid=145816034576135
+//https://armanicareers.pcrecruiter.net/pcrbin/reg5.aspx
+
+
+
+(function() {
+  var out = {};
+  var html_jobs = document.querySelectorAll("body > div > rss > channel > item");
+  var jobs = [];for(var x in html_jobs){
+    if(typeof html_jobs[x] =="function") continue;
+    if(typeof html_jobs[x] =="number") continue;
+    var job = {};
+    var elem = html_jobs[x];
+    job.title = elem.querySelector("item > title").textContent.trim();
+    job.title = job.title.split("|").shift();
+    job.url = elem.querySelector("item > link").textContent.trim();
+    job.location = elem.querySelector("item > title").textContent.trim();
+    job.location = job.location.split("|").pop().split("Outlet ").pop().split("Inspector,").pop().split("Projects,").pop();
+    
+    job.dateposted_raw = elem.querySelector("item > pubDate").textContent.trim();
+    
+    //job.logo = elem.querySelector("").getAttribute("src").trim();
+    //job.source_apply_email = elem.querySelector("").textContent.trim();
+    //job.source_empname = elem.querySelector("").textContent.trim();
+    //job.source_jobtype = elem.querySelector("").textContent.trim();
+    //job.source_salary = elem.querySelector("").textContent.trim();
+    job.temp = 1
+    jobs.push(job);
+  } 
+
+  out["jobs"]= jobs;
+  return out;
+})();

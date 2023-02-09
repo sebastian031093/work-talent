@@ -1,0 +1,29 @@
+$city = trim((string) $j->location);
+$country = trim((string) $j->country);
+    
+$arrloc=array();
+if($city) $arrloc[] = str_replace("Nationwide","",$city);
+if($country) $arrloc[] = str_replace("UK","United Kingdom",$country);
+$loc = implode(", ", $arrloc);
+
+$job=array();
+
+$job['title'] = trim((String) $j->title);
+$job['location'] = $loc;
+$job['source_empname'] = trim((String) $j->company);
+$job['source_salary'] = trim((String) $j->salary);
+$job['source_jobtype'] = trim((String) $j->jobtype);
+$job['url'] = trim((String) $j->url);
+$job['source_ppc'] = trim((String) $j->cpc)*100;
+
+$job['html'] = (String) $j->description;
+$job['jobdesc'] = strip_tags($job["html"]);
+
+$job['temp']=1;
+
+$id = trim((String) $j->id);
+
+$job['jobid'] = md5($job['title'].$job['location'].$job['source_empname'].$job['source_salary'].$job['source_jobtype'].$job['source_ppc'].$job['jobdesc'].$job['temp'].$id);
+
+
+te traes todo normal y abajo traes el id del job y luego construyes el jobid con los datos que tengas

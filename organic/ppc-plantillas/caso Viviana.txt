@@ -1,0 +1,73 @@
+//https://hoteljob-schweiz.de/interfaces/jobisjob.xml
+
+
+$empname = (String) $j->{"company-name"};
+//$empname = trim((String) $j->company->name);
+$toReplace = array("*****S", "****S", "***S", "*****", "****", "***", "3***/4**** Hotels", "3***", "4***", "1*M");
+$empname = str_replace($toReplace, "", $empname);
+
+$city = trim((string) $j->location->city);
+$country = trim((string) $j->location->country);
+
+    
+$arrloc=array();
+if($city) $arrloc[] = $city;
+if($country) $arrloc[] = $country;
+$loc = implode(", ", $arrloc);
+
+if(strpos(strtoupper($loc), "INTERNATIONAL")===true){
+  $loc = "Zermatt, CH";
+}
+
+if(strpos($loc, "*")===true){
+  $loc = "Zermatt, CH";
+}
+
+if(strpos($loc, "/ Ort auf Anfrage")===true){
+  $loc = "Zermatt, CH";
+}
+
+if(strpos($loc, "/ Oberengadin")===true){
+  $loc = "Zermatt, CH";
+}
+
+if(strpos($loc, ", übriges Wallis")===true){
+  $loc = "Zermatt, CH";
+}
+
+if(strpos($loc, "Emmenmatt,")===true){
+  $loc = "Emmenmatt, CH";
+}
+
+if(strpos($loc, "Wollerau")===true){
+  $loc = "Wollerau, CH";
+}
+
+if(strpos($loc, "Weiden i.d.OPf,")===true){
+  $loc = "Zermatt, CH";
+}
+
+if(strpos($loc, "Region")===true){
+  $loc = "Zermatt, CH";
+}
+
+$toReplace2 = array("Region", ", \\*Samnaun", "\\/ International", "übrige Region", "Umland", "Wilen bei", "nicht aufgeführte Region", "Zäziwil", "Leukerbad", "-> (PDF-Datei),", "Wilderswil", "Lenzerheide");
+$loc = str_replace($toReplace2, "", $loc);
+
+
+if(strpos(strtoupper($empname), "HOLIDAY INN")===false && strpos(strtoupper($empname), "CROWNE PLAZA")===false
+  && strpos(strtoupper($empname), "INTERCONTINENTAL HOTELS GROUP")===false){
+
+$job=array();
+$job['title'] = trim((String) $j->title);
+$job['location'] = $loc;
+$job['url'] = trim((String) $j->url);
+$job['source_empname'] = $empname;
+$job['html'] = (String) $j->description->{"full-text"};
+$job['jobdesc'] = $job['html'];
+$job['dateposted_raw'] = (String) $j->{"insert-data"};
+$job['source_jobtype'] = (String) $j->{"job-type"};
+  
+$job['temp']=141;
+  //print_r($job);
+}

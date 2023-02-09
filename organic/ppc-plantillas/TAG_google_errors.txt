@@ -1,0 +1,18 @@
+Boo2 y boo3.1
+
+1 Jobs
+------------
+if(job.title.indexOf('texto')>-1 && job.url.indexOf('texto')>-1){
+		job.google_error = 1;
+}
+
+2 o mas jobs
+--------------
+if((job.title.indexOf('texto')>-1 && job.url.indexOf('texto')>-1) ||
+(job.title.indexOf('texto')>-1 && job.url.indexOf('texto')>-1)){
+		job.google_error = 1;
+}
+
+dev Comment
+===========
+they ask to add tag google_error to job with title:"" on ticket # . Request by 

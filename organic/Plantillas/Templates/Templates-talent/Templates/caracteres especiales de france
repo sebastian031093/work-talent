@@ -1,0 +1,47 @@
+// caracteres especiales - francés
+
+job.html = job.html.replace(/â‚¬/gi, "€").trim();
+job.html = job.html.replace(/â€™/gi, "’").trim();
+job.html = job.html.replace(/Ã¡/gi, "á").trim();
+job.html = job.html.replace(/Ã¢/gi, "â").trim();
+job.html = job.html.replace(/Ã£/gi, "ã").trim();
+job.html = job.html.replace(/Ã¨/gi, "è").trim();
+job.html = job.html.replace(/Ã©/gi, "é").trim();
+job.html = job.html.replace(/Ãª/gi, "ê").trim();
+job.html = job.html.replace(/Ã«/gi, "ë").trim();
+job.html = job.html.replace(/Ã¬/gi, "ì").trim();
+job.html = job.html.replace(/Ã§/gi, "ç").trim();
+job.html = job.html.replace(/Â»/gi, "»").trim();
+job.html = job.html.replace(/Ã»/gi, "û").trim();
+job.html = job.html.replace(/Ã/gi, "à").trim();
+
+job.location = job.location.replace(/â‚¬/gi, "€").trim();
+job.location = job.location.replace(/â€™/gi, "’").trim();
+job.location = job.location.replace(/Ã¡/gi, "á").trim();
+job.location = job.location.replace(/Ã¢/gi, "â").trim();
+job.location = job.location.replace(/Ã£/gi, "ã").trim();
+job.location = job.location.replace(/Ã¨/gi, "è").trim();
+job.location = job.location.replace(/Ã©/gi, "é").trim();
+job.location = job.location.replace(/Ãª/gi, "ê").trim();
+job.location = job.location.replace(/Ã«/gi, "ë").trim();
+job.location = job.location.replace(/Ã¬/gi, "ì").trim();
+job.location = job.location.replace(/Ã§/gi, "ç").trim();
+job.location = job.location.replace(/Â»/gi, "»").trim();
+job.location = job.location.replace(/Ã»/gi, "û").trim();
+job.location = job.location.replace(/Ã/gi, "à").trim();
+
+
+job.title = job.title.replace(/â‚¬/gi, "€").trim();
+job.title = job.title.replace(/â€™/gi, "’").trim();
+job.title = job.title.replace(/Ã¡/gi, "á").trim();
+job.title = job.title.replace(/Ã¢/gi, "â").trim();
+job.title = job.title.replace(/Ã£/gi, "ã").trim();
+job.title = job.title.replace(/Ã¨/gi, "è").trim();
+job.title = job.title.replace(/Ã©/gi, "é").trim();
+job.title = job.title.replace(/Ãª/gi, "ê").trim();
+job.title = job.title.replace(/Ã«/gi, "ë").trim();
+job.title = job.title.replace(/Ã¬/gi, "ì").trim();
+job.title = job.title.replace(/Ã§/gi, "ç").trim();
+job.title = job.title.replace(/Â»/gi, "»").trim();
+job.title = job.title.replace(/Ã»/gi, "û").trim();
+job.title = job.title.replace(/Ã/gi, "à").trim();

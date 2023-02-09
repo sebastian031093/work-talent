@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns:job="https://www.infopraca.pl/2009/job" xmlns="http://www.w3.org/2005/Atom">
+  <id>tag:infopraca.pl,2009-06-03:/72745</id>
+  <title>infoPraca.pl job offers feed</title>
+  <updated>2021-04-12T14:00:05Z</updated>
+  <entry id="00001">
+    <link href="https://www.infopraca.pl/praca/senior-test-automation-engineer/gdansk/17268482" rel="self" />
+    <updated>2021-04-12T15:48:49Z</updated>
+    <author>
+      <name>Grafton Recruitment Sp. z o.o.</name>
+      <email>atom@careesma.com</email>
+    </author>
+    <title>Senior Test Automation Engineer</title>
+    <summary type="text">5-16-61574        A fast expanding international company, operating all over world is looking for qualified candidates to fill the position of Senior Test Automation Engineer.Responsiblities:- Developing automated tests in Java/JavaScript/Python/C#- Understand customer requirements and project documents- Maintaing and performing test automation frameworks on multiple platformsRequirements:The candidate should have:- Excellent knowledge of programming in Java/JavaScript/Python/C#- Experience with CI/CD, TeamCity or Jenkins- Good skills of test methodologies and corresponding tools like Selenium, Unit.js, Selenium- Fluent EnglishBenefits:The Client offers:- Online courses, library and experience exchange with co-workers- Remote work- English classes- Relocation package- Mutisport card, private medical insurance, health care- Career development plan- Cooperation in multicultural environment</summary>
+    <content><![CDATA[<div xmlns="http://www.w3.org/1999/xhtml">5-16-61574
+        <br/><p>A fast expanding international company, operating all over world is looking for qualified candidates to fill the position of Senior Test Automation Engineer.<br/><br/>Responsiblities:<br/>- Developing automated tests in Java/JavaScript/Python/C#<br/>- Understand customer requirements and project documents<br/>- Maintaing and performing test automation frameworks on multiple platforms<br/><br/>Requirements:<br/>The candidate should have:<br/>- Excellent knowledge of programming in Java/JavaScript/Python/C#<br/>- Experience with CI/CD, TeamCity or Jenkins<br/>- Good skills of test methodologies and corresponding tools like Selenium, Unit.js, Selenium<br/>- Fluent English<br/><br/>Benefits:<br/>The Client offers:<br/>- Online courses, library and experience exchange with co-workers<br/>- Remote work<br/>- English classes<br/>- Relocation package<br/>- Mutisport card, private medical insurance, health care<br/>- Career development plan<br/>- Cooperation in multicultural environment</p></div>]]></content>
+    <category term="39" />
+    <job:location>
+      <job:municipality>Gdańsk</job:municipality>
+      <job:region>11</job:region>
+    </job:location>
+    <job:contracttype>2</job:contracttype>
+    <job:workshift>0</job:workshift>
+    <job:experience>1</job:experience>
+    <job:degree>24</job:degree>
+    <job:vacancies>1</job:vacancies>
+    <job:workpermit></job:workpermit>
+    <job:salary currency="">
+      <job:period></job:period>
+      <job:minimum></job:minimum>
+      <job:maximum></job:maximum>
+    </job:salary>
+  </entry>
+  <entry id="00002">
+    <link href="https://www.infopraca.pl/praca/java-developer/gdansk/17268481" rel="self" />
+    <updated>2021-04-12T15:48:49Z</updated>
+    <author>
+      <name>Grafton Recruitment Sp. z o.o.</name>
+      <email>atom@careesma.com</email>
+    </author>
+    <title>Java Developer</title>
+    <summary type="text">5-16-61573        A fast expanding international company, operating all over world is looking for qualified candidates to fill the position of Java Developer.Responsibilities:- Creating new functionalities - Working in international agile team- Meet the high expectations of clients through frequent release cycles of quality softwareRequirements:- At least 3 years of professional experience with Java- Experience with Spring/Guice or other DI framework- Agile and CI/CD experience - Fluent English- Knowledge about Design &amp; Integration PatternsNice to have:- Strong Java8 skills- Knowledge of micro-services architecture- Experience with GCP/Azure- Knowledge of Python/Scala/HadoopBenefits:The Client offers:- Online courses, library and experience exchange with co-workers- English classes- Relocation package- Mutisport card, private medical insurance, health care- Career development plan- Cooperation in multicultural environment</summary>
+    <content><![CDATA[<div xmlns="http://www.w3.org/1999/xhtml">5-16-61573
+        <br/><p>A fast expanding international company, operating all over world is looking for qualified candidates to fill the position of Java Developer.<br/><br/>Responsibilities:<br/>- Creating new functionalities <br/>- Working in international agile team<br/>- Meet the high expectations of clients through frequent release cycles of quality software<br/><br/>Requirements:<br/>- At least 3 years of professional experience with Java<br/>- Experience with Spring/Guice or other DI framework<br/>- Agile and CI/CD experience <br/>- Fluent English<br/>- Knowledge about Design &amp; Integration Patterns<br/><br/>Nice to have:<br/>- Strong Java8 skills<br/>- Knowledge of micro-services architecture<br/>- Experience with GCP/Azure<br/>- Knowledge of Python/Scala/Hadoop<br/><br/>Benefits:<br/>The Client offers:<br/>- Online courses, library and experience exchange with co-workers<br/>- English classes<br/>- Relocation package<br/>- Mutisport card, private medical insurance, health care<br/>- Career development plan<br/>- Cooperation in multicultural environment</p></div>]]></content>
+    <category term="6" />
+    <job:location>
+      <job:municipality>Gdańsk</job:municipality>
+      <job:region>11</job:region>
+    </job:location>
+    <job:contracttype>1</job:contracttype>
+    <job:workshift>0</job:workshift>
+    <job:experience>1</job:experience>
+    <job:degree>24</job:degree>
+    <job:vacancies>1</job:vacancies>
+    <job:workpermit></job:workpermit>
+    <job:salary currency="">
+      <job:period></job:period>
+      <job:minimum></job:minimum>
+      <job:maximum></job:maximum>
+    </job:salary>
+  </entry>
+  <entry id="00003">
+    <link href="https://www.infopraca.pl/praca/business-analyst/gdansk/17268480" rel="self" />
+    <updated>2021-04-12T15:48:48Z</updated>
+    <author>
+      <name>Grafton Recruitment Sp. z o.o.</name>
+      <email>atom@careesma.com</email>
+    </author>
+    <title>Business Analyst</title>
+    <summary type="text">5-5-61571        A fast expanding international company, operating all over world is looking for qualified candidates to fill the position of Business Analyst.Responsibilities:- The Business Analyst identifies gathers and translates the client requirements into highly specified requirement specification / project documentation / user story- Extensive cooperation with external or internal clients- Ability to consult with business partners and translate business needs to requirements- Development of functional and system design specifications for client engagements- Working with Lead Business Analyst, Product Owner and development team- Documenting the design and work products- Provide consultation and assistance in knowledge transferRequirements:We need you to have:- At least 3 years of business analysis experience in Financial Services- Knowledge in decompose EPICs to Stories- Fluent English skills and ability to work with international Clients- Knowledge of instant payments- Experience in quality controlling- Ability to produce draft UX design Nice to have:- Experience in internation organizationsBenefits:The Client offers:- Online courses, library and experience exchange with co-workers- Remote work- English classes- Relocation package- Mutisport card, private medical insurance, health care- Career development plan- Cooperation in multicultural environment</summary>
+    <content><![CDATA[<div xmlns="http://www.w3.org/1999/xhtml">5-5-61571
+        <br/><p>A fast expanding international company, operating all over world is looking for qualified candidates to fill the position of Business Analyst.<br/><br/>Responsibilities:<br/>- The Business Analyst identifies gathers and translates the client requirements into highly specified requirement specification / project documentation / user story<br/>- Extensive cooperation with external or internal clients<br/>- Ability to consult with business partners and translate business needs to requirements<br/>- Development of functional and system design specifications for client engagements<br/>- Working with Lead Business Analyst, Product Owner and development team<br/>- Documenting the design and work products<br/>- Provide consultation and assistance in knowledge transfer<br/><br/>Requirements:<br/>We need you to have:<br/>- At least 3 years of business analysis experience in Financial Services<br/>- Knowledge in decompose EPICs to Stories<br/>- Fluent English skills and ability to work with international Clients<br/>- Knowledge of instant payments<br/>- Experience in quality controlling<br/>- Ability to produce draft UX design <br/><br/>Nice to have:<br/>- Experience in internation organizations<br/><br/>Benefits:<br/>The Client offers:<br/>- Online courses, library and experience exchange with co-workers<br/>- Remote work<br/>- English classes<br/>- Relocation package<br/>- Mutisport card, private medical insurance, health care<br/>- Career development plan<br/>- Cooperation in multicultural environment</p></div>]]></content>
+    <category term="105" />
+    <job:location>
+      <job:municipality>Gdańsk</job:municipality>
+      <job:region>11</job:region>
+    </job:location>
+    <job:contracttype>1</job:contracttype>
+    <job:workshift>0</job:workshift>
+    <job:experience>1</job:experience>
+    <job:degree>24</job:degree>
+    <job:vacancies>1</job:vacancies>
+    <job:workpermit></job:workpermit>
+    <job:salary currency="">
+      <job:period></job:period>
+      <job:minimum></job:minimum>
+      <job:maximum></job:maximum>
+    </job:salary>
+  </entry>
+  <entry id="00004">
+    <link href="https://www.infopraca.pl/praca/net-software-engineer/gdansk/17268479" rel="self" />
+    <updated>2021-04-12T15:48:47Z</updated>
+    <author>
+      <name>Grafton Recruitment Sp. z o.o.</name>
+      <email>atom@careesma.com</email>
+    </author>
+    <title>.NET Software Engineer</title>
+    <summary type="text">5-16-61570        A fast expanding international company, operating all over world is looking for qualified candidates to fill the position of .NET Software Engineer.We are looking for an ambitious person of .NET Software Engineer with great technical skills concentrated on C#, .NET Framework and .NET Core.Requirements:The candidate should have:- 2+ years of professional experience with .NET- Experience in development Web applications- Strong SQL- good English communication skills(min. B1)- Understanding of Object-Oriented Programming- CI/CD- Experience in one of cloud technologies(AWS, GCP or Azure)Nice to have:- Experience with ReactJS or AngularJS- NoSQLBenefits:The Client offers:- Online courses, library and experience exchange with co-workers- Remote work- English classes- Relocation package- Mutisport card, private medical insurance, health care- Career development plan- Cooperation in multicultural environment</summary>
+    <content><![CDATA[<div xmlns="http://www.w3.org/1999/xhtml">5-16-61570
+        <br/><p>A fast expanding international company, operating all over world is looking for qualified candidates to fill the position of .NET Software Engineer.<br/><br/>We are looking for an ambitious person of .NET Software Engineer with great technical skills concentrated on C#, .NET Framework and .NET Core.<br/><br/>Requirements:<br/>The candidate should have:<br/>- 2+ years of professional experience with .NET<br/>- Experience in development Web applications<br/>- Strong SQL<br/>- good English communication skills(min. B1)<br/>- Understanding of Object-Oriented Programming<br/>- CI/CD<br/>- Experience in one of cloud technologies(AWS, GCP or Azure)<br/><br/>Nice to have:<br/>- Experience with ReactJS or AngularJS<br/>- NoSQL<br/><br/>Benefits:<br/>The Client offers:<br/>- Online courses, library and experience exchange with co-workers<br/>- Remote work<br/>- English classes<br/>- Relocation package<br/>- Mutisport card, private medical insurance, health care<br/>- Career development plan<br/>- Cooperation in multicultural environment</p></div>]]></content>
+    <category term="6" />
+    <job:location>
+      <job:municipality>Gdańsk</job:municipality>
+      <job:region>11</job:region>
+    </job:location>
+    <job:contracttype>1</job:contracttype>
+    <job:workshift>0</job:workshift>
+    <job:experience>1</job:experience>
+    <job:degree>24</job:degree>
+    <job:vacancies>1</job:vacancies>
+    <job:workpermit></job:workpermit>
+    <job:salary currency="">
+      <job:period></job:period>
+      <job:minimum></job:minimum>
+      <job:maximum></job:maximum>
+    </job:salary>
+  </entry>
+  <entry id="00005">
+    <link href="https://www.infopraca.pl/praca/qa-tester/wroclaw/17268478" rel="self" />
+    <updated>2021-04-12T15:48:46Z</updated>
+    <author>
+      <name>Grafton Recruitment Sp. z o.o.</name>
+      <email>atom@careesma.com</email>
+    </author>
+    <title>QA Tester</title>
+    <summary type="text">5-16-61189        Wynagrodzenie: 6000 - 10000 PLNDla jednego z naszych Klientów zajmującego się tworzeniem gier mobilnych poszukujemy kandydata na stanoiwsko QA TesterZadania:- Przeprowadzanie testów aplikacji mobilnych- Wykrywanie, analizowanie problemów zidentyfikowanych w testach- Współpraca w obrębie zespołu ScrumowegoWymagania:- Przynajmniej 2-letnie doświadczenie w roli Testera Manualnego- Znajomość Jira, Confluence- Komunikatywna znajomość j. angielskiegoKorzyści:- Prywatna opieka medyczna- Możliwość pracy zdalnej 1-2 dni w tygodniu (na czas pandemii praca w pełni zdalna)- Wsparcie w relokacji dla osób spoza Wrocławia</summary>
+    <content><![CDATA[<div xmlns="http://www.w3.org/1999/xhtml">5-16-61189
+        Wynagrodzenie: 6000 - 10000 PLN<br/><p>Dla jednego z naszych Klientów zajmującego się tworzeniem gier mobilnych poszukujemy kandydata na stanoiwsko QA Tester<br/><br/>Zadania:<br/>- Przeprowadzanie testów aplikacji mobilnych<br/>- Wykrywanie, analizowanie problemów zidentyfikowanych w testach<br/>- Współpraca w obrębie zespołu Scrumowego<br/><br/>Wymagania:<br/>- Przynajmniej 2-letnie doświadczenie w roli Testera Manualnego<br/>- Znajomość Jira, Confluence<br/>- Komunikatywna znajomość j. angielskiego<br/><br/>Korzyści:<br/>- Prywatna opieka medyczna<br/>- Możliwość pracy zdalnej 1-2 dni w tygodniu (na czas pandemii praca w pełni zdalna)<br/>- Wsparcie w relokacji dla osób spoza Wrocławia</p></div>]]></content>
+    <category term="39" />
+    <job:location>
+      <job:municipality>Wrocław</job:municipality>
+      <job:region>1</job:region>
+    </job:location>
+    <job:contracttype>1</job:contracttype>
+    <job:workshift>0</job:workshift>
+    <job:experience>1</job:experience>
+    <job:degree>24</job:degree>
+    <job:vacancies>1</job:vacancies>
+    <job:workpermit></job:workpermit>
+    <job:salary currency="">
+      <job:period></job:period>
+      <job:minimum></job:minimum>
+      <job:maximum></job:maximum>
+    </job:salary>
+  </entry>
+  <entry id="00006">
+    <link href="https://www.infopraca.pl/praca/pracownik-produkcyjny/komorniki/17268477" rel="self" />
+    <updated>2021-04-12T15:48:46Z</updated>
+    <author>
+      <name>Gi Group Sp. z o.o.</name>
+      <email>atom@careesma.com</email>
+    </author>
+    <title>Pracownik produkcyjny</title>
+    <summary type="text">Dla naszego Klienta, wiodącej firmy na rynku, poszukujemy osób na stanowisko:Pracownik produkcji﻿Zakres obowiązków:•     obsługiwanie maszyn,•     przenoszenie pojemników z farbami przy pomocy maszyn,•     drukowanie etykiet,•     porządkowanie miejsca pracy, mycie pojemników,•     ustawianie materiałów na półkach.Oczekujemy:•     dokładnego wykonywania swoich obowiązków,•     umiejętności pracy w zespole ,•     mile widziane doświadczenie w pracach produkcyjnych,•     mile widziane posiadanie uprawnień do obsługi wózka widłowego UDT.Oferujemy:•   umowę o pracę,•   atrakcyjne wynagrodzenie (zależne od doświadczenia) + premię,•   pracę od poniedziałku do piątku w godz. 8-16,•   możliwość odbywania dodatkowych kursów oraz szkoleń.Agencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.Agencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</summary>
+    <content><![CDATA[<div xmlns="http://www.w3.org/1999/xhtml">Dla naszego Klienta, wiodącej firmy na rynku, poszukujemy osób na stanowisko:<br/><br/>Pracownik produkcji<br/><br/>﻿<br/><br/>Zakres obowiązków:<br/><br/><br/>•     obsługiwanie maszyn,<br/>•     przenoszenie pojemników z farbami przy pomocy maszyn,<br/>•     drukowanie etykiet,<br/>•     porządkowanie miejsca pracy, mycie pojemników,<br/>•     ustawianie materiałów na półkach.<br/><br/>Oczekujemy:<br/><br/><br/>•     dokładnego wykonywania swoich obowiązków,<br/>•     umiejętności pracy w zespole ,<br/>•     mile widziane doświadczenie w pracach produkcyjnych,<br/>•     mile widziane posiadanie uprawnień do obsługi wózka widłowego UDT.<br/><br/>Oferujemy:<br/><br/><br/>•   umowę o pracę,<br/>•   atrakcyjne wynagrodzenie (zależne od doświadczenia) + premię,<br/>•   pracę od poniedziałku do piątku w godz. 8-16,<br/>•   możliwość odbywania dodatkowych kursów oraz szkoleń.<br/><br/><br/>Agencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.<br/>Agencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</div>]]></content>
+    <category term="47" />
+    <job:location>
+      <job:municipality>Komorniki</job:municipality>
+      <job:region>15</job:region>
+    </job:location>
+    <job:contracttype>2</job:contracttype>
+    <job:workshift>0</job:workshift>
+    <job:experience>1</job:experience>
+    <job:degree>5</job:degree>
+    <job:vacancies>1</job:vacancies>
+    <job:workpermit></job:workpermit>
+    <job:salary currency="">
+      <job:period></job:period>
+      <job:minimum></job:minimum>
+      <job:maximum></job:maximum>
+    </job:salary>
+  </entry>
+  <entry id="00007">
+    <link href="https://www.infopraca.pl/praca/mechanik/namyslow/17268476" rel="self" />
+    <updated>2021-04-12T15:48:46Z</updated>
+    <author>
+      <name>Gi Group Sp. z o.o.</name>
+      <email>atom@careesma.com</email>
+    </author>
+    <title>Mechanik</title>
+    <summary type="text">Aktualnie dla naszego Klienta - prowadzimy rekrutację do Działu Utrzymania Ruchu na stanowisko:MECHANIKZADANIA:Obsługa serwisowa maszyn produkcyjnychUtrzymanie sprawności maszyn i urządzeńSprawne wyszukiwanie części i materiałów niezbędnych do realizacji naprawUczestnictwo w działaniach zwiększających efektywność procesówOCZEKIWANIA:Wykształcenie techniczneUprawnienia elektryczne SEP do 1 kVDoświadczenie w pracy na podobnym stanowisku w firmie produkcyjnejUmiejętności posługiwania się dokumentacją technicznąGotowość do pracy w systemie czterobrygadowymNASZ KLIENT OFERUJE:Stabilne zatrudnienie na podstawie umowy o pracęDodatki do wynagrodzenia za: pracę w nocy, pracę w systemie czterobrygadowymPremia miesięczna +10%, premia za stały dozór +10%Prywatna opieka medycznaUbezpieczenie na życieMultikafeteria"Wczasy pod gruszą"Pracowniczy program emerytalnyAgencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</summary>
+    <content><![CDATA[<div xmlns="http://www.w3.org/1999/xhtml">Aktualnie dla naszego Klienta - prowadzimy rekrutację do Działu Utrzymania Ruchu na stanowisko:<br/>MECHANIK<br/><br/>ZADANIA:<br/>Obsługa serwisowa maszyn produkcyjnych<br/>Utrzymanie sprawności maszyn i urządzeń<br/>Sprawne wyszukiwanie części i materiałów niezbędnych do realizacji napraw<br/>Uczestnictwo w działaniach zwiększających efektywność procesów<br/><br/>OCZEKIWANIA:<br/>Wykształcenie techniczne<br/>Uprawnienia elektryczne SEP do 1 kV<br/>Doświadczenie w pracy na podobnym stanowisku w firmie produkcyjnej<br/>Umiejętności posługiwania się dokumentacją techniczną<br/>Gotowość do pracy w systemie czterobrygadowym<br/><br/>NASZ KLIENT OFERUJE:<br/>Stabilne zatrudnienie na podstawie umowy o pracę<br/>Dodatki do wynagrodzenia za: pracę w nocy, pracę w systemie czterobrygadowym<br/>Premia miesięczna +10%, premia za stały dozór +10%<br/>Prywatna opieka medyczna<br/>Ubezpieczenie na życie<br/>Multikafeteria<br/>"Wczasy pod gruszą"<br/>Pracowniczy program emerytalny<br/><br/><br/>Agencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</div>]]></content>
+    <category term="88" />
+    <job:location>
+      <job:municipality>Namysłów</job:municipality>
+      <job:region>8</job:region>
+    </job:location>
+    <job:contracttype>1</job:contracttype>
+    <job:workshift>0</job:workshift>
+    <job:experience>1</job:experience>
+    <job:degree>5</job:degree>
+    <job:vacancies>1</job:vacancies>
+    <job:workpermit></job:workpermit>
+    <job:salary currency="">
+      <job:period></job:period>
+      <job:minimum></job:minimum>
+      <job:maximum></job:maximum>
+    </job:salary>
+  </entry>
+  <entry id="00008">
+    <link href="https://www.infopraca.pl/praca/it-manager/czestochowa/17268475" rel="self" />
+    <updated>2021-04-12T15:48:45Z</updated>
+    <author>
+      <name>Gi Group Sp. z o.o.</name>
+      <email>atom@careesma.com</email>
+    </author>
+    <title>IT Manager</title>
+    <summary type="text">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:IT Manager Wymagania:* wykształcenie wyższe techniczne * minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT* znajomość środowisk bazodanowych oraz programów klasy ERP * znajomość języków programowania PHP oraz SQL* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów* dobra znajomość j. angielskiegoZadania: * zarządzanie podległym zespołem programistów oraz informatyków* zasilanie i utrzymanie aktualnych baz danych zasobów IT* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacjiOferujemy:* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta* atrakcyjne wynagrodzenie* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinneAgencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</summary>
+    <content><![CDATA[<div xmlns="http://www.w3.org/1999/xhtml">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:<br/><br/>IT Manager <br/><br/>Wymagania:<br/>* wykształcenie wyższe techniczne <br/>* minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)<br/>* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT<br/>* znajomość środowisk bazodanowych oraz programów klasy ERP <br/>* znajomość języków programowania PHP oraz SQL<br/>* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów<br/>* dobra znajomość j. angielskiego<br/><br/>Zadania: <br/>* zarządzanie podległym zespołem programistów oraz informatyków<br/>* zasilanie i utrzymanie aktualnych baz danych zasobów IT<br/>* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu<br/>* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacji<br/><br/>Oferujemy:<br/>* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta<br/>* atrakcyjne wynagrodzenie<br/>* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych<br/>* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego<br/>* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinne<br/><br/><br/>Agencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</div>]]></content>
+    <category term="44" />
+    <job:location>
+      <job:municipality>Częstochowa</job:municipality>
+      <job:region>12</job:region>
+    </job:location>
+    <job:contracttype>1</job:contracttype>
+    <job:workshift>0</job:workshift>
+    <job:experience>1</job:experience>
+    <job:degree>24</job:degree>
+    <job:vacancies>1</job:vacancies>
+    <job:workpermit></job:workpermit>
+    <job:salary currency="">
+      <job:period></job:period>
+      <job:minimum></job:minimum>
+      <job:maximum></job:maximum>
+    </job:salary>
+  </entry>
+  <entry id="00009">
+    <link href="https://www.infopraka.pl/praca/operator-wozkow-widlowych-magazynier/swarzedz/17268474" rel="self" />
+    <updated>2021-04-12T15:48:45Z</updated>
+    <author>
+      <name>Gi Group Sp. z o.o.</name>
+      <email>atom@careesma.com</email>
+    </author>
+    <title>Operator wózków widłowych - magazynier</title>
+    <summary type="text">Dla naszego Klienta poszukujemy doświadczonych pracowników do pracy w magazynie w Swarzędzu:Magazynier z obsługą wózków widłowychOferujemy:umowę o pracę, wynagrodzenie – 4300 zł bruttomiłą atmosferę pracy w dobrze zgranym zespolemożliwość korzystania z pakietów benefitów (opieka medyczna, dopłata do karty sportowej, prezenty świąteczne)możliwość rozwoju, wraz  z awansem zawodowympracę od poniedziałku do piątku na jedną zmianęZakres obowiązków:przyjęcie i wydanie towarurozładunek oraz przyjęcie ilościowe towarukontrola stanów magazynowychprzygotowywanie inwentaryzacjiprowadzenie dokumentacji magazynowejOd kandydatów oczekujemy:wykształcenia m.in. zawodowegominimum rok doświadczenia na podobnym stanowiskuuprawnienia do prowadzenia wózków widłowych - IIWJOumiejętności pracy w zespoleznajomości dokumentów magazynowychAgencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</summary>
+    <content><![CDATA[<div xmlns="http://www.w3.org/1999/xhtml">Dla naszego Klienta poszukujemy doświadczonych pracowników do pracy w magazynie w Swarzędzu:<br/><br/><br/>Magazynier z obsługą wózków widłowych<br/><br/>Oferujemy:<br/>umowę o pracę, wynagrodzenie – 4300 zł brutto<br/>miłą atmosferę pracy w dobrze zgranym zespole<br/>możliwość korzystania z pakietów benefitów (opieka medyczna, dopłata do karty sportowej, prezenty świąteczne)<br/>możliwość rozwoju, wraz  z awansem zawodowym<br/>pracę od poniedziałku do piątku na jedną zmianę<br/><br/>Zakres obowiązków:<br/>przyjęcie i wydanie towaru<br/>rozładunek oraz przyjęcie ilościowe towaru<br/>kontrola stanów magazynowych<br/>przygotowywanie inwentaryzacji<br/>prowadzenie dokumentacji magazynowej<br/><br/>Od kandydatów oczekujemy:<br/>wykształcenia m.in. zawodowego<br/>minimum rok doświadczenia na podobnym stanowisku<br/>uprawnienia do prowadzenia wózków widłowych - IIWJO<br/>umiejętności pracy w zespole<br/>znajomości dokumentów magazynowych<br/><br/><br/>Agencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</div>]]></content>
+    <category term="47" />
+    <job:location>
+      <job:municipality>Swarzędz</job:municipality>
+      <job:region>15</job:region>
+    </job:location>
+    <job:contracttype>1</job:contracttype>
+    <job:workshift>0</job:workshift>
+    <job:experience>1</job:experience>
+    <job:degree>5</job:degree>
+    <job:vacancies>1</job:vacancies>
+    <job:workpermit></job:workpermit>
+    <job:salary currency="">
+      <job:period></job:period>
+      <job:minimum></job:minimum>
+      <job:maximum></job:maximum>
+    </job:salary>
+  </entry>
+  <entry id="00010">
+    <link href="https://www.infopraca.pl/praca/cieszyn-technik-stazysta/cieszyn/17268467" rel="self" />
+    <updated>2021-04-12T15:48:42Z</updated>
+    <author>
+      <name>Praca.farmacja.pl</name>
+      <email>atom@careesma.com</email>
+    </author>
+    <title>CIESZYN - Technik Stażysta</title>
+    <summary type="text">Apteka Słoneczna w CIESZYNIE zatrudni TECHNIKA STAŻYSTĘOsobie zatrudnionej na powyższym stanowisku oferujemy:	atrakcyjne wynagrodzenie 2400 zł/netto,	stabilne zatrudnienie na podstawie umowy o pracę (pełny etat),	świadczenia pozapłacowe w formie karty multisport,	pracę w zgranym i profesjonalnym zespole,	możliwość rozwoju.Osoby zainteresowane prosimy o przesyłanie aplikacji w postaci CV za pomocą niniejszej strony. Zachęcamy do przesyłania zgłoszeń.*** Ogłoszenie skierowane jest do osób, które posiadają dyplom technika farmacji.</summary>
+    <content><![CDATA[<div xmlns="http://www.w3.org/1999/xhtml"><br/>
+<br/>
+<br/>
+<p>Apteka Słoneczna w CIESZYNIE zatrudni TECHNIKA STAŻYSTĘ</p><br/>
+<br/>
+<p>Osobie zatrudnionej na powyższym stanowisku oferujemy:</p><br/>
+<br/>
+<ul><br/>
+	<li>atrakcyjne wynagrodzenie 2400 zł/netto,</li><br/>
+	<li>stabilne zatrudnienie na podstawie umowy o pracę (pełny etat),</li><br/>
+	<li>świadczenia pozapłacowe w formie karty multisport,</li><br/>
+	<li>pracę w zgranym i profesjonalnym zespole,</li><br/>
+	<li>możliwość rozwoju.</li><br/>
+</ul><br/>
+<br/>
+<p>Osoby zainteresowane prosimy o przesyłanie aplikacji w postaci CV za pomocą niniejszej strony.<br/><br/>
+ <br/><br/>
+Zachęcamy do przesyłania zgłoszeń.<br/><br/>
+*** Ogłoszenie skierowane jest do osób, które posiadają dyplom technika farmacji.</p><br/>
+<br/>
+<br/>
+<br/></div>]]></content>
+    <category term="53" />
+    <job:location>
+      <job:municipality>Cieszyn</job:municipality>
+      <job:region>12</job:region>
+    </job:location>
+    <job:contracttype>2</job:contracttype>
+    <job:workshift>0</job:workshift>
+    <job:experience>4</job:experience>
+    <job:degree>9</job:degree>
+    <job:vacancies>1</job:vacancies>
+    <job:workpermit></job:workpermit>
+    <job:salary currency="">
+      <job:period></job:period>
+      <job:minimum></job:minimum>
+      <job:maximum></job:maximum>
+    </job:salary>
+  </entry>
+  <entry id="00018">
+    <link href="https://www.infopraca.pl/praca/it-manager/czestochowa/17268475" rel="self" />
+    <updated>2021-04-12T15:48:45Z</updated>
+    <author>
+      <name>Gi Group Sp. z o.o.</name>
+      <email>atom@careesma.com</email>
+    </author>
+    <title>IT Manager</title>
+    <summary type="text">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:IT Manager Wymagania:* wykształcenie wyższe techniczne * minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT* znajomość środowisk bazodanowych oraz programów klasy ERP * znajomość języków programowania PHP oraz SQL* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów* dobra znajomość j. angielskiegoZadania: * zarządzanie podległym zespołem programistów oraz informatyków* zasilanie i utrzymanie aktualnych baz danych zasobów IT* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacjiOferujemy:* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta* atrakcyjne wynagrodzenie* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinneAgencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</summary>
+    <content><![CDATA[<div xmlns="http://www.w3.org/1999/xhtml">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:<br/><br/>IT Manager <br/><br/>Wymagania:<br/>* wykształcenie wyższe techniczne <br/>* minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)<br/>* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT<br/>* znajomość środowisk bazodanowych oraz programów klasy ERP <br/>* znajomość języków programowania PHP oraz SQL<br/>* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów<br/>* dobra znajomość j. angielskiego<br/><br/>Zadania: <br/>* zarządzanie podległym zespołem programistów oraz informatyków<br/>* zasilanie i utrzymanie aktualnych baz danych zasobów IT<br/>* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu<br/>* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacji<br/><br/>Oferujemy:<br/>* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta<br/>* atrakcyjne wynagrodzenie<br/>* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych<br/>* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego<br/>* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinne<br/><br/><br/>Agencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</div>]]></content>
+    <category term="44" />
+    <job:location>
+      <job:municipality>Florida, US</job:municipality>
+      <job:region>12</job:region>
+    </job:location>
+    <job:contracttype>1</job:contracttype>
+    <job:workshift>0</job:workshift>
+    <job:experience>1</job:experience>
+    <job:degree>24</job:degree>
+    <job:vacancies>1</job:vacancies>
+    <job:workpermit></job:workpermit>
+    <job:salary currency="">
+      <job:period></job:period>
+      <job:minimum></job:minimum>
+      <job:maximum></job:maximum>
+    </job:salary>
+  </entry>
+  <entry id="00019">
+    <link href="https://www.infopraca.pl/praca/it-manager/czestochowa/17268475" rel="self" />
+    <updated>2021-04-12T15:48:45Z</updated>
+    <author>
+      <name>Gi Group Sp. z o.o.</name>
+      <email>atom@careesma.com</email>
+    </author>
+    <title>IT Manager</title>
+    <summary type="text">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:IT Manager Wymagania:* wykształcenie wyższe techniczne * minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT* znajomość środowisk bazodanowych oraz programów klasy ERP * znajomość języków programowania PHP oraz SQL* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów* dobra znajomość j. angielskiegoZadania: * zarządzanie podległym zespołem programistów oraz informatyków* zasilanie i utrzymanie aktualnych baz danych zasobów IT* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacjiOferujemy:* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta* atrakcyjne wynagrodzenie* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinneAgencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</summary>
+    <content><![CDATA[<div xmlns="http://www.w3.org/1999/xhtml">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:<br/><br/>IT Manager <br/><br/>Wymagania:<br/>* wykształcenie wyższe techniczne <br/>* minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)<br/>* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT<br/>* znajomość środowisk bazodanowych oraz programów klasy ERP <br/>* znajomość języków programowania PHP oraz SQL<br/>* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów<br/>* dobra znajomość j. angielskiego<br/><br/>Zadania: <br/>* zarządzanie podległym zespołem programistów oraz informatyków<br/>* zasilanie i utrzymanie aktualnych baz danych zasobów IT<br/>* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu<br/>* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacji<br/><br/>Oferujemy:<br/>* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta<br/>* atrakcyjne wynagrodzenie<br/>* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych<br/>* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego<br/>* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinne<br/><br/><br/>Agencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</div>]]></content>
+    <category term="44" />
+    <job:location>
+      <job:municipality>Idaho, US</job:municipality>
+      <job:region>12</job:region>
+    </job:location>
+    <job:contracttype>1</job:contracttype>
+    <job:workshift>0</job:workshift>
+    <job:experience>1</job:experience>
+    <job:degree>24</job:degree>
+    <job:vacancies>1</job:vacancies>
+    <job:workpermit></job:workpermit>
+    <job:salary currency="">
+      <job:period></job:period>
+      <job:minimum></job:minimum>
+      <job:maximum></job:maximum>
+    </job:salary>
+  </entry>
+  <entry id="00019">
+    <link href="https://www.infopraca.pl/praca/it-manager/czestochowa/17268475" rel="self" />
+    <updated>2021-04-12T15:48:45Z</updated>
+    <author>
+      <name>Gi Group Sp. z o.o.</name>
+      <email>atom@careesma.com</email>
+    </author>
+    <title>IT Manager</title>
+    <summary type="text">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:IT Manager Wymagania:* wykształcenie wyższe techniczne * minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT* znajomość środowisk bazodanowych oraz programów klasy ERP * znajomość języków programowania PHP oraz SQL* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów* dobra znajomość j. angielskiegoZadania: * zarządzanie podległym zespołem programistów oraz informatyków* zasilanie i utrzymanie aktualnych baz danych zasobów IT* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacjiOferujemy:* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta* atrakcyjne wynagrodzenie* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinneAgencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</summary>
+    <content><![CDATA[<div xmlns="http://www.w3.org/1999/xhtml">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:<br/><br/>IT Manager <br/><br/>Wymagania:<br/>* wykształcenie wyższe techniczne <br/>* minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)<br/>* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT<br/>* znajomość środowisk bazodanowych oraz programów klasy ERP <br/>* znajomość języków programowania PHP oraz SQL<br/>* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów<br/>* dobra znajomość j. angielskiego<br/><br/>Zadania: <br/>* zarządzanie podległym zespołem programistów oraz informatyków<br/>* zasilanie i utrzymanie aktualnych baz danych zasobów IT<br/>* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu<br/>* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacji<br/><br/>Oferujemy:<br/>* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta<br/>* atrakcyjne wynagrodzenie<br/>* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych<br/>* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego<br/>* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinne<br/><br/><br/>Agencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</div>]]></content>
+    <category term="44" />
+    <job:location>
+      <job:municipality>Indiana, US</job:municipality>
+      <job:region>12</job:region>
+    </job:location>
+    <job:contracttype>1</job:contracttype>
+    <job:workshift>0</job:workshift>
+    <job:experience>1</job:experience>
+    <job:degree>24</job:degree>
+    <job:vacancies>1</job:vacancies>
+    <job:workpermit></job:workpermit>
+    <job:salary currency="">
+      <job:period></job:period>
+      <job:minimum></job:minimum>
+      <job:maximum></job:maximum>
+    </job:salary>
+  </entry>
+  <entry id="00020">
+    <link href="https://www.infopraca.pl/praca/it-manager/czestochowa/17268475" rel="self" />
+    <updated>2021-04-12T15:48:45Z</updated>
+    <author>
+      <name>Gi Group Sp. z o.o.</name>
+      <email>atom@careesma.com</email>
+    </author>
+    <title>IT Manager</title>
+    <summary type="text">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:IT Manager Wymagania:* wykształcenie wyższe techniczne * minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT* znajomość środowisk bazodanowych oraz programów klasy ERP * znajomość języków programowania PHP oraz SQL* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów* dobra znajomość j. angielskiegoZadania: * zarządzanie podległym zespołem programistów oraz informatyków* zasilanie i utrzymanie aktualnych baz danych zasobów IT* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacjiOferujemy:* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta* atrakcyjne wynagrodzenie* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinneAgencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</summary>
+    <content><![CDATA[<div xmlns="http://www.w3.org/1999/xhtml">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:<br/><br/>IT Manager <br/><br/>Wymagania:<br/>* wykształcenie wyższe techniczne <br/>* minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)<br/>* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT<br/>* znajomość środowisk bazodanowych oraz programów klasy ERP <br/>* znajomość języków programowania PHP oraz SQL<br/>* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów<br/>* dobra znajomość j. angielskiego<br/><br/>Zadania: <br/>* zarządzanie podległym zespołem programistów oraz informatyków<br/>* zasilanie i utrzymanie aktualnych baz danych zasobów IT<br/>* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu<br/>* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacji<br/><br/>Oferujemy:<br/>* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta<br/>* atrakcyjne wynagrodzenie<br/>* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych<br/>* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego<br/>* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinne<br/><br/><br/>Agencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</div>]]></content>
+    <category term="44" />
+    <job:location>
+      <job:municipality>Pensylvania, US</job:municipality>
+      <job:region>12</job:region>
+    </job:location>
+    <job:contracttype>1</job:contracttype>
+    <job:workshift>0</job:workshift>
+    <job:experience>1</job:experience>
+    <job:degree>24</job:degree>
+    <job:vacancies>1</job:vacancies>
+    <job:workpermit></job:workpermit>
+    <job:salary currency="">
+      <job:period></job:period>
+      <job:minimum></job:minimum>
+      <job:maximum></job:maximum>
+    </job:salary>
+  </entry>
+  <entry id="00021">
+    <link href="https://www.infopraca.pl/praca/it-manager/czestochowa/17268475" rel="self" />
+    <updated>2021-04-12T15:48:45Z</updated>
+    <author>
+      <name>Gi Group Sp. z o.o.</name>
+      <email>atom@careesma.com</email>
+    </author>
+    <title>IT Manager</title>
+    <summary type="text">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:IT Manager Wymagania:* wykształcenie wyższe techniczne * minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT* znajomość środowisk bazodanowych oraz programów klasy ERP * znajomość języków programowania PHP oraz SQL* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów* dobra znajomość j. angielskiegoZadania: * zarządzanie podległym zespołem programistów oraz informatyków* zasilanie i utrzymanie aktualnych baz danych zasobów IT* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacjiOferujemy:* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta* atrakcyjne wynagrodzenie* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinneAgencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</summary>
+    <content><![CDATA[<div xmlns="http://www.w3.org/1999/xhtml">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:<br/><br/>IT Manager <br/><br/>Wymagania:<br/>* wykształcenie wyższe techniczne <br/>* minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)<br/>* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT<br/>* znajomość środowisk bazodanowych oraz programów klasy ERP <br/>* znajomość języków programowania PHP oraz SQL<br/>* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów<br/>* dobra znajomość j. angielskiego<br/><br/>Zadania: <br/>* zarządzanie podległym zespołem programistów oraz informatyków<br/>* zasilanie i utrzymanie aktualnych baz danych zasobów IT<br/>* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu<br/>* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacji<br/><br/>Oferujemy:<br/>* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta<br/>* atrakcyjne wynagrodzenie<br/>* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych<br/>* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego<br/>* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinne<br/><br/><br/>Agencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</div>]]></content>
+    <category term="44" />
+    <job:location>
+      <job:municipality>Montreal, Canada</job:municipality>
+      <job:region>12</job:region>
+    </job:location>
+    <job:contracttype>1</job:contracttype>
+    <job:workshift>0</job:workshift>
+    <job:experience>1</job:experience>
+    <job:degree>24</job:degree>
+    <job:vacancies>1</job:vacancies>
+    <job:workpermit></job:workpermit>
+    <job:salary currency="">
+      <job:period></job:period>
+      <job:minimum></job:minimum>
+      <job:maximum></job:maximum>
+    </job:salary>
+  </entry>
+  <entry id="00022">
+    <link href="https://www.infopraca.pl/praca/it-manager/czestochowa/17268475" rel="self" />
+    <updated>2021-04-12T15:48:45Z</updated>
+    <author>
+      <name>Gi Group Sp. z o.o.</name>
+      <email>atom@careesma.com</email>
+    </author>
+    <title>IT Manager</title>
+    <summary type="text">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:IT Manager Wymagania:* wykształcenie wyższe techniczne * minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT* znajomość środowisk bazodanowych oraz programów klasy ERP * znajomość języków programowania PHP oraz SQL* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów* dobra znajomość j. angielskiegoZadania: * zarządzanie podległym zespołem programistów oraz informatyków* zasilanie i utrzymanie aktualnych baz danych zasobów IT* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacjiOferujemy:* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta* atrakcyjne wynagrodzenie* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinneAgencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</summary>
+    <content><![CDATA[<div xmlns="http://www.w3.org/1999/xhtml">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:<br/><br/>IT Manager <br/><br/>Wymagania:<br/>* wykształcenie wyższe techniczne <br/>* minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)<br/>* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT<br/>* znajomość środowisk bazodanowych oraz programów klasy ERP <br/>* znajomość języków programowania PHP oraz SQL<br/>* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów<br/>* dobra znajomość j. angielskiego<br/><br/>Zadania: <br/>* zarządzanie podległym zespołem programistów oraz informatyków<br/>* zasilanie i utrzymanie aktualnych baz danych zasobów IT<br/>* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu<br/>* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacji<br/><br/>Oferujemy:<br/>* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta<br/>* atrakcyjne wynagrodzenie<br/>* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych<br/>* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego<br/>* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinne<br/><br/><br/>Agencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</div>]]></content>
+    <category term="44" />
+    <job:location>
+      <job:municipality>Alberta, Canada</job:municipality>
+      <job:region>12</job:region>
+    </job:location>
+    <job:contracttype>1</job:contracttype>
+    <job:workshift>0</job:workshift>
+    <job:experience>1</job:experience>
+    <job:degree>24</job:degree>
+    <job:vacancies>1</job:vacancies>
+    <job:workpermit></job:workpermit>
+    <job:salary currency="">
+      <job:period></job:period>
+      <job:minimum></job:minimum>
+      <job:maximum></job:maximum>
+    </job:salary>
+  </entry>
+  <entry id="00023">
+    <link href="https://www.infopraca.pl/praca/it-manager/czestochowa/17268475" rel="self" />
+    <updated>2021-04-12T15:48:45Z</updated>
+    <author>
+      <name>Gi Group Sp. z o.o.</name>
+      <email>atom@careesma.com</email>
+    </author>
+    <title>IT Manager</title>
+    <summary type="text">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:IT Manager Wymagania:* wykształcenie wyższe techniczne * minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT* znajomość środowisk bazodanowych oraz programów klasy ERP * znajomość języków programowania PHP oraz SQL* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów* dobra znajomość j. angielskiegoZadania: * zarządzanie podległym zespołem programistów oraz informatyków* zasilanie i utrzymanie aktualnych baz danych zasobów IT* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacjiOferujemy:* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta* atrakcyjne wynagrodzenie* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinneAgencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</summary>
+    <content><![CDATA[<div xmlns="http://www.w3.org/1999/xhtml">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:<br/><br/>IT Manager <br/><br/>Wymagania:<br/>* wykształcenie wyższe techniczne <br/>* minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)<br/>* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT<br/>* znajomość środowisk bazodanowych oraz programów klasy ERP <br/>* znajomość języków programowania PHP oraz SQL<br/>* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów<br/>* dobra znajomość j. angielskiego<br/><br/>Zadania: <br/>* zarządzanie podległym zespołem programistów oraz informatyków<br/>* zasilanie i utrzymanie aktualnych baz danych zasobów IT<br/>* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu<br/>* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacji<br/><br/>Oferujemy:<br/>* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta<br/>* atrakcyjne wynagrodzenie<br/>* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych<br/>* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego<br/>* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinne<br/><br/><br/>Agencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</div>]]></content>
+    <category term="44" />
+    <job:location>
+      <job:municipality>Quebec, Canada</job:municipality>
+      <job:region>12</job:region>
+    </job:location>
+    <job:contracttype>1</job:contracttype>
+    <job:workshift>0</job:workshift>
+    <job:experience>1</job:experience>
+    <job:degree>24</job:degree>
+    <job:vacancies>1</job:vacancies>
+    <job:workpermit></job:workpermit>
+    <job:salary currency="">
+      <job:period></job:period>
+      <job:minimum></job:minimum>
+      <job:maximum></job:maximum>
+    </job:salary>
+  </entry>
+  <entry id="00024">
+    <link href="https://www.infopraca.pl/praca/it-manager/czestochowa/17268475" rel="self" />
+    <updated>2021-04-12T15:48:45Z</updated>
+    <author>
+      <name>Gi Group Sp. z o.o.</name>
+      <email>atom@careesma.com</email>
+    </author>
+    <title>IT Manager</title>
+    <summary type="text">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:IT Manager Wymagania:* wykształcenie wyższe techniczne * minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT* znajomość środowisk bazodanowych oraz programów klasy ERP * znajomość języków programowania PHP oraz SQL* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów* dobra znajomość j. angielskiegoZadania: * zarządzanie podległym zespołem programistów oraz informatyków* zasilanie i utrzymanie aktualnych baz danych zasobów IT* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacjiOferujemy:* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta* atrakcyjne wynagrodzenie* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinneAgencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</summary>
+    <content><![CDATA[<div xmlns="http://www.w3.org/1999/xhtml">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:<br/><br/>IT Manager <br/><br/>Wymagania:<br/>* wykształcenie wyższe techniczne <br/>* minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)<br/>* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT<br/>* znajomość środowisk bazodanowych oraz programów klasy ERP <br/>* znajomość języków programowania PHP oraz SQL<br/>* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów<br/>* dobra znajomość j. angielskiego<br/><br/>Zadania: <br/>* zarządzanie podległym zespołem programistów oraz informatyków<br/>* zasilanie i utrzymanie aktualnych baz danych zasobów IT<br/>* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu<br/>* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacji<br/><br/>Oferujemy:<br/>* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta<br/>* atrakcyjne wynagrodzenie<br/>* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych<br/>* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego<br/>* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinne<br/><br/><br/>Agencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</div>]]></content>
+    <category term="44" />
+    <job:location>
+      <job:municipality>New England, Canada</job:municipality>
+      <job:region>12</job:region>
+    </job:location>
+    <job:contracttype>1</job:contracttype>
+    <job:workshift>0</job:workshift>
+    <job:experience>1</job:experience>
+    <job:degree>24</job:degree>
+    <job:vacancies>1</job:vacancies>
+    <job:workpermit></job:workpermit>
+    <job:salary currency="">
+      <job:period></job:period>
+      <job:minimum></job:minimum>
+      <job:maximum></job:maximum>
+    </job:salary>
+  </entry>
+  <entry id="00025">
+    <link href="https://www.infopraca.pl/praca/it-manager/czestochowa/17268475" rel="self" />
+    <updated>2021-04-12T15:48:45Z</updated>
+    <author>
+      <name>Gi Group Sp. z o.o.</name>
+      <email>atom@careesma.com</email>
+    </author>
+    <title>IT Manager</title>
+    <summary type="text">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:IT Manager Wymagania:* wykształcenie wyższe techniczne * minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT* znajomość środowisk bazodanowych oraz programów klasy ERP * znajomość języków programowania PHP oraz SQL* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów* dobra znajomość j. angielskiegoZadania: * zarządzanie podległym zespołem programistów oraz informatyków* zasilanie i utrzymanie aktualnych baz danych zasobów IT* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacjiOferujemy:* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta* atrakcyjne wynagrodzenie* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinneAgencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</summary>
+    <content><![CDATA[<div xmlns="http://www.w3.org/1999/xhtml">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:<br/><br/>IT Manager <br/><br/>Wymagania:<br/>* wykształcenie wyższe techniczne <br/>* minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)<br/>* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT<br/>* znajomość środowisk bazodanowych oraz programów klasy ERP <br/>* znajomość języków programowania PHP oraz SQL<br/>* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów<br/>* dobra znajomość j. angielskiego<br/><br/>Zadania: <br/>* zarządzanie podległym zespołem programistów oraz informatyków<br/>* zasilanie i utrzymanie aktualnych baz danych zasobów IT<br/>* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu<br/>* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacji<br/><br/>Oferujemy:<br/>* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta<br/>* atrakcyjne wynagrodzenie<br/>* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych<br/>* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego<br/>* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinne<br/><br/><br/>Agencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</div>]]></content>
+    <category term="44" />
+    <job:location>
+      <job:municipality>Brampton, Canada</job:municipality>
+      <job:region>12</job:region>
+    </job:location>
+    <job:contracttype>1</job:contracttype>
+    <job:workshift>0</job:workshift>
+    <job:experience>1</job:experience>
+    <job:degree>24</job:degree>
+    <job:vacancies>1</job:vacancies>
+    <job:workpermit></job:workpermit>
+    <job:salary currency="">
+      <job:period></job:period>
+      <job:minimum></job:minimum>
+      <job:maximum></job:maximum>
+    </job:salary>
+  </entry>
+  <entry id="00026">
+    <link href="https://www.infopraca.pl/praca/it-manager/czestochowa/17268475" rel="self" />
+    <updated>2021-04-12T15:48:45Z</updated>
+    <author>
+      <name>Gi Group Sp. z o.o.</name>
+      <email>atom@careesma.com</email>
+    </author>
+    <title>IT Manager</title>
+    <summary type="text">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:IT Manager Wymagania:* wykształcenie wyższe techniczne * minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT* znajomość środowisk bazodanowych oraz programów klasy ERP * znajomość języków programowania PHP oraz SQL* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów* dobra znajomość j. angielskiegoZadania: * zarządzanie podległym zespołem programistów oraz informatyków* zasilanie i utrzymanie aktualnych baz danych zasobów IT* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacjiOferujemy:* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta* atrakcyjne wynagrodzenie* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinneAgencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</summary>
+    <content><![CDATA[<div xmlns="http://www.w3.org/1999/xhtml">Dla naszego Klienta, prężnie działającej firmy produkcyjnej, poszukujemy obecnie osoby na stanowisko:<br/><br/>IT Manager <br/><br/>Wymagania:<br/>* wykształcenie wyższe techniczne <br/>* minimum 5 lat doświadczenia w zarządzaniu zespołami IT (programiści oraz informatycy)<br/>* posiadanie wiedzy z zakresu nowoczesnych narzędzi i technologii IT<br/>* znajomość środowisk bazodanowych oraz programów klasy ERP <br/>* znajomość języków programowania PHP oraz SQL<br/>* znajomość metod tworzenia oprogramowania (Scrum/Agile) oraz wdrażania projektów<br/>* dobra znajomość j. angielskiego<br/><br/>Zadania: <br/>* zarządzanie podległym zespołem programistów oraz informatyków<br/>* zasilanie i utrzymanie aktualnych baz danych zasobów IT<br/>* analiza bieżących potrzeb organizacji w obszarze IT wynikających z użytkowania sprzętu<br/>* nadzór nad bezpieczeństwem systemów informatycznych i przepływu informacji<br/><br/>Oferujemy:<br/>* zatrudnienie w oparciu o umowę o pracę, bezpośrednio u naszego Klienta<br/>* atrakcyjne wynagrodzenie<br/>* możliwość uczestnictwa w rozwoju struktur firmy, także tych międzynarodowych<br/>* narzędzia pracy: laptop, komputer służbowy, samochód służbowy do użytku prywatnego<br/>* benefity: ubezpieczenie na życie, prywatna opieka medyczna, karta Multisport, bonusy rodzinne<br/><br/><br/>Agencja pracy Gi Group - posiadamy Certyfikat Ministerstwa Gospodarki i Pracy nr 570.</div>]]></content>
+    <category term="44" />
+    <job:location>
+      <job:municipality>Ontario, Canada</job:municipality>
+      <job:region>12</job:region>
+    </job:location>
+    <job:contracttype>1</job:contracttype>
+    <job:workshift>0</job:workshift>
+    <job:experience>1</job:experience>
+    <job:degree>24</job:degree>
+    <job:vacancies>1</job:vacancies>
+    <job:workpermit></job:workpermit>
+    <job:salary currency="">
+      <job:period></job:period>
+      <job:minimum></job:minimum>
+      <job:maximum></job:maximum>
+    </job:salary>
+  </entry>
+</feed>

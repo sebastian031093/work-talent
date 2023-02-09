@@ -1,0 +1,651 @@
+http://beta.neuvoo.com/xml-spiders/view/xml-spider.php?scanid=
+
+
+guarde esto... Si la url es www.empleos.com/empleo1 ... 
+entonces le colocas + "?utm_source=neuvoo" , pero si es www.empleos.com/?empleo1 ... 
+entonces le concatenas + "&utm_source=neuvoo"
+
+ $job['title'] = html_entity_decode($job['title'], ENT_QUOTES | ENT_XML1, 'UTF-8');
+
+-x http://178.60.28.98:9999
+-H "accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3"
+-H "accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3"
+
+shell.exe tildado
+
+//print_r($job);
+
+Validacion de fecha
+
+Stalin mode:ON
+
+$jobdate = trim((String) $j->date);
+$date = date('m/d/Y', strtotime($jobdate));
+
+Normal mode:ON
+
+$date = (String) $j->pubDate; 
+$date = explode("-", $date);  
+$job['dateposted_raw'] = $date[1]."/".$date[2]."/".$date[0];
+print_r($job);
+
+//
+$job['url'] = trim((String) $j->link[href]); 
+-------
+$job['title'] = (String) $j->title;
+$job['title'] = preg_replace('/[0-9]+/', '', $job['title']);
+---------
+
+$loc = str_replace("'","", $loc);  
+
+$job['dateposted_raw'] =trim((String) $j->created_at;
+
+$city = trim((string) $j->city);
+$state = trim((string) $j->city_area);
+$country = trim((string) $j->region);
+    
+$arrloc=array();
+if($city) $arrloc[] = $city;
+if($state) $arrloc[] = $state;
+if($country) $arrloc[] = $country;
+$loc = implode(", ", $arrloc);
+
+$job=array();
+$job['temp']=1;
+$job['title'] = (String) $j->title; 
+$job['html']  = (String) $j->content . "br" . (String) $j-> requirements;
+$job['jobdesc'] = $job['html'];
+$job['location'] = $loc; 
+$job['source_jobtype'] = (String) $j->contract;
+$job['url'] = (String) $j->url;
+$job['source_apply_email'] = trim((String) $j->*tag*);
+$job['source_empname'] = (String) $j->company;
+//$job['salary'] = (String) $j->salary;
+
+
+//////////////////////////
+
+$city = trim((string) $j->city);
+$state = trim((string) $j->state);
+$country = trim((string) $j->country);
+    
+$arrloc=array();
+if($city) $arrloc[] = $city;
+if($state) $arrloc[] = $state;
+if($country) $arrloc[] = $country;
+$loc = implode(", ", $arrloc);
+
+$job=array();
+$job['temp']=1;
+$job['title'] = (String) $j->title;
+$job['html']  = (String) $j->body;
+$job['jobdesc'] = $job['html'];
+$job['location'] = $loc;
+$job['source_jobtype'] = (String) $j->contract;
+$job['url'] = (String) $j->url;
+$job['source_empname'] = (String) $j->company;
+
+//////////////////////////////
+
+$city = trim((string) $j->where->{"city-name"});
+$country = trim((string) $j->where->country);
+$test_content =  $j;
+$arrloc=array();
+if($city) $arrloc[] = $city;
+if($country) $arrloc[] = $country;
+$loc = implode(", ", $arrloc);
+
+$job=array();
+$job['temp'] = 1;
+$job['title'] = (String) $j->what->jobtitle;
+$job['jobdesc'] = (String) $j->what->description;
+$job['html'] = $job['jobdesc'];
+$job['location'] = $loc;
+//$job['url'] = (String) $j->what->ad-url;
+$job['url'] = (String) $j->what->{"ad-url"};
+$job['source_empname'] = (String) $j->who->company;
+$job['logo'] = (String) $j->who->{"logo-url"};
+
+///////////////////////////////
+
+$job=array();
+$job['temp']=1;
+$job['title'] = (String) $j->title;
+$job['html']  = (String) $j->description;
+$job['jobdesc'] = $job['html'];
+$job['location'] = (String) $j->location; 
+$job['url'] = (String) $j->link;
+$job['source_empname'] = (String) $j->company;
+
+///////////////////////////////
+$empname = trim((String) $j->company_name);
+$url = trim((String) $j->url);
+
+if(strpos(strtoupper($empname), 'LEROY MERLIN')===false && strpos($url, 'analista-comercial/57782')===false || strpos(strtoupper($empname), 'INFOCERT')===false){
+
+  $city = trim((string) $j->city);
+  $state = trim((string) $j->state);
+  $country = trim((string) $j->country);
+
+  $arrloc=array();
+  if($city) $arrloc[] = $city;
+  if($state) $arrloc[] = $state;
+  if($country) $arrloc[] = $country;
+  $loc = implode(", ", $arrloc);
+
+  $job=array();
+  $job['title'] = trim((String) $j->title);
+  $job['url'] = trim((String) $j->url);
+  $job['source_empname'] = $empname;
+  if(strpos(strtoupper($job['source_empname']), 'CONFIDENTIA')>-1 || strpos(strtoupper($job['source_empname']), 'CONFIDETIA')>-1 ||
+     strpos(strtoupper($job['source_empname']), 'CONFID.')>-1 || strpos(strtoupper($job['source_empname']), 'COMPANY CONFIDEN')>-1 ||
+     strpos(strtoupper($job['source_empname']), 'CONFIDENT')>-1 || strpos(strtoupper($job['source_empname']), 'ANONY')>-1 ||
+     strpos(strtoupper($job['source_empname']), 'COMPAGNIE')>-1 || strpos(strtoupper($job['source_empname']), 'COMPANY')>-1 || 
+     strpos($job['source_empname'], 'date')>-1){
+    $job['source_empname'] = 'RedTrabaje España';
+  }
+  $job['location'] = $loc;
+  $job['source_salary'] = trim((String) $j->salary);
+  $job['source_jobtype'] = trim((String) $j->jobtype);
+  $job['html'] = (String) $j->description;
+  $job['jobdesc'] = $job['html'];
+  $job['logo'] = trim((String) $j->company_logo);
+  $job['temp']=1;
+
+}
+..........................
+$empname = trim((String) $j->company);
+if(strpos(strtoupper($empname), 'TAILS.COM')===false && strpos(strtoupper($empname), 'SHIELDSQUARE')===false){
+  $job=array();
+  $job['title'] = trim((String) $j->title);
+  $job['url'] = trim((String) $j->url);
+  $job['source_empname'] = $empname;
+  $job['location'] = ($loc.trim()) ? $loc.trim() : 'UK';
+  $multilocation = ",";
+  $job['source_salary'] = trim((String) $j->salary);
+  $source_ppc = trim((String) $j->sponsored);
+  $source_ppc = preg_replace('/sponsored/i', "", $source_ppc);
+  $job['source_ppc'] = trim($source_ppc)*100;
+  $job['html'] = (String) $j->description;
+  $job['jobdesc'] = $job['html'];
+  $job['temp']=1;
+}
+..........................
+Epale mr, esto te puede servir
+if(strpos(strtoupper($empname), 'MASSAGE ADDICT')===false){
+
+}
+
+Debes tomar  $empname antes, ejemplo:
+$empname = trim((String) $j->company);
+
+......................
+filtro por url
+$url = trim((String) $j->url);
+if(strpos($url, "http://www.empregojusto.com/emprego/142936")===false){
+  $city = trim((string) $j->city);
+  $state = trim((string) $j->region);
+
+  $arrloc=array();
+  if($city) $arrloc[] = $city;
+  if($state) $arrloc[] = $state;
+  $loc = implode(", ", $arrloc);
+
+  $job=array();
+  $job['temp']=1;
+  $job['title'] = (String) $j->title;
+  $job['html']  = (String) $j->content;
+  $job['jobdesc'] = $job['html'];
+  $job['location'] = $loc;
+  $job['url'] = $url;
+  $job['source_empname'] = (String) $j->company;
+}
+
+....................
+template split 
+
+
+$city = trim((string) $j->city);
+$state = trim((string) $j->region);
+$country = "Poland";
+
+$title = trim((String) $j->title);
+
+$title = preg_split('/\(REF |\(RÉF |\(réf |ref |réf |REF |\(réf\.|\(ref:/', $title);
+if(is_array($t)) $title = $t[0];
+else $title = $title;
+    
+$arrloc=array();
+if($city) $arrloc[] = $city;
+if($state) $arrloc[] = $state;
+if($country) $arrloc[] = $country;
+$loc = implode(", ", $arrloc);
+
+if(strlen(trim((String)$city)) < 4){
+  $loc = "Warsaw, Poland";
+}
+
+$url = trim((String) $j->url);
+if(strpos(strtoupper($url), 'NEXT-JOBS24-COM-PL')===true){
+  $loc = "Warsaw, Poland";
+}
+
+$empname = trim((String) $j->company);
+if(strpos(strtoupper($empname), 'TEKPARTNERS')===false &&
+   strpos(strtoupper($empname), 'LEROY MERLIN')===false &&
+   strpos(strtoupper($empname), 'MEDIPE')===false &&
+   strpos(strtoupper($empname), 'MEDIPE')===false &&
+   strpos(strtoupper($empname), 'PERZUKUNFT')===false){
+
+  $job=array();
+  $job['title'] = $title;
+  $job['location'] = $loc;
+  $job['url'] = $url."?utm_source=neuvoo";
+  $job['source_empname'] = $empname;
+  $description = (String) $j->content;
+  $job['html'] = preg_replace('/(HTTP?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \?=.-]*)*\/?/i', "", $description);
+  $job['html'] = str_replace("www.brueggen-engineering.de","",$job['html']);
+  $job['html'] = str_replace("[Apply online]","",$job['html']);
+  $job['html'] = str_replace("www.facebook.com/Galdora.e.K","",$job['html']);
+  $job['html'] = str_replace("www.beckhaeuser.com","",$job['html']);
+  $job['html'] = str_replace("www.besthillwork.eu","",$job['html']);
+  $job['html'] = str_replace("www.intemporis.eu","",$job['html']);
+  $job['jobdesc'] = $job['html'];
+  $job['temp']=1;
+
+}
+
+///////////////     multilocation  y replace      /////////////////
+$city = trim((string) $j->where->{'city-name'});
+if(substr($city, -1) === ",");{
+	$city = substr($city, 0, (strlen($city)-1));
+}
+$country = trim((string) $j->where->country);
+
+$arrloc=array();
+if($city) $arrloc[] = $city;
+$city = preg_replace('/Ludwigshafen,/i', 'Ludwigshafen', $city);
+
+if($country) $arrloc[] = $country;
+$loc = implode(", ", $arrloc);
+
+$loc = preg_replace('/[0-9],|Worldwide|Remote - Home Office,/i', '', $loc);
+$loc = preg_replace('/Velden am Wörthersee, DE/i', 'Velden am Wörther See', $loc);
+$loc = preg_replace('/&#246;/i', 'ö', $loc);
+$loc = preg_replace('/&#252;/i', 'ü', $loc);
+$loc = preg_replace('/&#252;/i', 'ü', $loc);
+
+
+$temp = 12;
+$title = trim((String) $j->what->jobtitle);
+$html = (String) $j->what->description;
+$jobdesc = $html;
+$url = trim((String) $j->what->{'ad-url'});
+$logo = trim((String) $j->what->{'logo-url'});
+$empname = trim((String) $j->what->company);
+
+$multi_jobs = array();
+$job=array();
+
+if(strpos($city, ',')>-1){
+  $city_array = explode(",", $city);
+  foreach ($city_array as $citytemp) {
+    $jobx['temp'] = $temp;
+    $jobx['title'] = $title;
+    $jobx['html'] = $html;
+    $jobx['jobdesc'] = $jobdesc;
+    $jobx['location'] = $citytemp.', '.trim($country);
+    $jobx['url'] = $url;
+    $jobx['source_empname'] = $empname;
+    $jobx['logo'] = $logo;
+    $multi_jobs[] = $jobx;
+  }
+}
+else{
+  $job['temp'] = $temp;
+  $job['title'] = $title;
+  $job['html'] = $html;
+  $job['jobdesc'] = $jobdesc;
+  $job['location'] = $loc;
+  $job['logo'] = $logo;
+  $job['url'] = $url;
+  $job['source_empname'] = $empname;
+}
+
+/////////////////////////////
+
+$empname = trim((String) $j->company);
+$title = trim((String) $j->title);
+
+$city = trim((string) $j->city);
+$city = preg_replace('/Multiple Locations \(as stated in job posting\)|Various|Other/i','',$city);
+$state = trim((string) $j->state);
+$country = trim((string) $j->country);
+    
+$arrloc=array();
+if($city) $arrloc[] = $city;
+if($state) $arrloc[] = $state;
+if($country) $arrloc[] = $country;
+$loc = implode(", ", $arrloc);
+
+if(strpos(strtoupper($empname), "LYFT")===false && strpos(strtoupper($empname), "CR ENGLAND")===false &&
+   strpos(strtoupper($empname), "CAVIAR")===false && strpos(strtoupper($empname), "POSTEMATES")===false &&
+   strpos(strtoupper($empname), "PANTHER - PREMIUM LOGISTICS")===false &&
+   strpos(strtoupper($empname), "PANTHER PREMIUM LOGISTICS")===false &&
+   strpos(strtoupper($empname), "MERCER")===false && strpos(strtoupper($empname), "MC TANK")===false &&
+   strpos(strtoupper($empname), "GARDEN GROVE HOSPITAL AND MEDICAL CENTER")===false &&
+   strpos(strtoupper($empname), "INSTACART")===false &&
+   strpos(strtoupper($empname), "UBER")===false && strpos(strtoupper($empname), "CYBERCODER")===false &&
+   strpos(strtoupper($empname), "CMP.JOBS")===false && strpos(strtoupper($empname), "CMP JOBS")===false &&
+   strpos(strtoupper($empname), "VIP KID")===false && strpos(strtoupper($empname), "C.R. ENGLAND")===false &&
+   strpos(strtoupper($empname), "VIRTUALVOCATIONS")===false && strpos(strtoupper($empname), "VIPKID")===false &&
+   strpos(strtoupper($empname), "JOBTOME")===false && strpos(strtoupper($empname), "ENTERPRISE")===false &&
+   strpos(strtoupper($empname), "XAVIER UNIVERSITY")===false && strpos(strtoupper($empname), "CARE.COM")===false &&
+   strpos(strtoupper($empname), "LENATI")===false && strpos(strtoupper($empname), "UBS")===false &&
+   strpos(strtoupper($empname), "VANDERBILT UNIVERSITY MEDICAL CENTER")===false && strpos(strtoupper($empname), "WALTER THOMPSON")===false &&
+   strpos(strtoupper($empname), "NUTRIEN")===false && strpos(strtoupper($empname), "STANDARD CHARTERED BANK")===false &&
+   strpos(strtoupper($title), "DO NOT APPLY")===false && strpos(strtoupper($title), "NOT APPLY")===false &&
+   strpos(strtoupper($title), "JOBTEST")===false && strpos(strtoupper($title), "TEST JOB")===false &&
+   strpos(strtoupper($title), "INTERNAL TESTING")===false && strpos(strtoupper($title), "TEST")===false &&
+   strpos(strtoupper($title), "???")===false &&
+   strpos(strtoupper($loc), "BUENOS AIRES, AR,")===false && strpos(strtoupper($loc), "PERTH, WA,")===false &&
+   strpos(strtoupper($loc), "TEL AVIV, IL,")===false && strpos(strtoupper($loc), "HAMBURG, DE,")===false &&
+   strpos(strtoupper($loc), "GREATER MUMBAI, IN,")===false &&
+   strpos(strtoupper($loc), "UNITED STATES")!==false){
+  
+  $job=array();
+  $job['temp'] = 1;
+  $job['title'] = $title;
+  $job['html']  = (String) $j->body;
+  $job['jobdesc'] = $job['html'];
+  $job['location'] = $loc;
+  /*if(strpos($job['location'], "Location")!==false || strpos($job['location'], "Multiple")!==false ||
+     strpos($job['location'], "Various")!==false) || strpos($job['location'], "Perform")!==false ||
+     strpos($job['location'], "primary")!==false || strpos($job['location'], "Minimum")!==false ||
+     strpos($job['location'], "responsibilities")!==false || strpos($job['location'], "Other")!==false ||
+     strpos($job['location'], "AllCities")!==false || strpos(strtoupper($job['location']), "POSITION")!==false){
+    //$job['location'] = explode(",", $job['location']);
+    $job['location'] = $job['location'][1];
+  }*/
+  $job['source_jobtype'] = trim((String) $j->job_type);
+  $job['url'] = trim((String) $j->url);
+  $job['source_ppc'] = trim((String) $j->cpc);
+  $job['job_pixel'] = trim((String) $j->tracking_url);
+  $job['source_empname'] = $empname;
+  if(strpos(strtoupper($job['source_empname']), "CONFIDENTIAL")!==false){$job['source_empname'] = "Nexxt, Inc.";}
+  if(strpos(strtoupper($job['source_empname']), "Vattenfall")!==false && 
+     strpos(strtoupper($job['location']), "UNITED STATES")!==false){
+    $job['location'] = explode(",", $job['location']);
+    $job['location'] = $job['location'][0];
+  }
+}
+
+.......................
+selector dentro de otro  location->city
+
+$city = trim((string) $j->location->city);
+$region = trim((string) $j->location->region);
+$country = trim((string) $j->location->country);
+    
+$arrloc=array();
+if($city) $arrloc[] = $city;
+if($region) $arrloc[] = $region;
+if($country) $arrloc[] = $country;
+$loc = implode(", ", $arrloc);
+
+$job=array();
+$job['temp']=1;
+$job['title'] = trim((String) $j->title);
+$job['html']  = (String) $j->description;
+$job['jobdesc'] = $job['html'];
+$job['location'] = $loc;
+//$job['source_jobtype'] = (String) $j->jobtype;
+$job['url'] = trim((String) $j->url);
+$job['source_empname'] = trim((String) $j->company);
+
+-----------------------------
+filtrado por empname
+
+$location = trim((String) $j->location); 
+$empname = trim((String) $j->company);
+if($location!="" && strpos(strtoupper($empname), "SMITHS MEDICAL")===false 
+&& strpos(strtoupper($empname), "YOUBAHN")===false 
+&& strpos(strtoupper($empname), "YOUBAHN")===false
+&& strpos(strtoupper($empname), "PRODICOM")===false){
+  
+  $job=array();
+  $job['temp']=1;
+  $job['title'] = (String) $j->title;
+  $job['jobdesc'] = (String) $j->description;
+  $job['html'] = $job['jobdesc'];
+  $job['location'] = $location; 
+  $job['url'] = (String) $j->url."?utm_source=neuvoo";
+  $job['source_empname'] = $empname;
+}
+
+-----------------------------
+$city = trim((string) $j->Location->City);
+$state = trim((string) $j->Location->StateProvince[Code]);
+$statetmp = explode("-", $state);
+$state = $statetmp[1];
+$country = trim((string) $j->Location->Country[Code]);
+    
+$arrloc=array();
+if($city) $arrloc[] = $city;
+if($state) $arrloc[] = $state;
+if($country) $arrloc[] = $country;
+$loc = implode(", ", $arrloc);
+
+$empname = trim((String) $j->Company->Name);
+if(strpos(strtoupper($empname), 'LAWRENCE COMPANIES')===false &&  
+   strpos(strtoupper($title), 'NOT APPLY')===false){
+  $job=array();
+  $job['title'] = trim((String) $j->Position->Title[1]);
+  $job['url'] = trim((String) $j->Posting->CandidateResponses->URL);
+  $job['source_empname'] = $empname;
+  $job['location'] = $loc;
+  $job['html'] = (String) $j->Position->Description[1];
+  $job['html'] = preg_replace('/\. /i', ".<br>", $job['html']);
+  $job['jobdesc'] = $job['html'];
+  $job['source_apply_email'] = trim((String) $j->Posting->CandidateResponses->Email);
+  if(strpos($job['source_apply_email'], 'notspecified')>-1){
+    $job['source_apply_email'] = '';
+  }
+  $job['source_jobtype'] = trim((String) $j->Position->Classification->Type[Code]);
+  $job['temp']=123;
+}
+
+------------------------------
+
+$city = trim((string) $j->city);
+$state = trim((string) $j->state);
+$country = trim((string) $j->country);
+    
+$arrloc=array();
+if($city) $arrloc[] = $city;
+if($state) $arrloc[] = $state;
+if($country) $arrloc[] = $country;
+$loc = implode(", ", $arrloc);
+
+if(empty($loc)){$loc = "US";}
+
+$job=array();
+$job['temp']=1;
+$job['title'] = (String) $j->title;
+$job['html']  = (String) $j->description;
+$job['jobdesc'] = $job['html'];
+$job['location'] = str_replace("Field Based,","",$loc);
+$job['source_jobtype'] = (String) $j->jobtype;
+$job['url'] = (String) $j->url."&source=Neuvoo";
+$job['source_empname'] = (String) $j->company;
+
+...................................
+
+  $arrloc=array();
+  if($city) $arrloc[] = $city;
+  if($state) $arrloc[] = $state;
+  if($country) $arrloc[] = $country;
+  $loc = implode(", ", $arrloc);
+
+  $job=array();
+  $job['title'] = (String) $j->title;
+  $job['url'] = (String) $j->url;
+  $job['source_empname'] = (String) $j->company;
+  $job['location'] = $loc;
+  $job['html'] = (String) $j->description;
+  $job['html'] = preg_replace('/style=\\"[^\\"]*\\"/', '', $job['html']);
+  $job['html'] = preg_replace('/class=\\"[^\\"]*\\"/', '', $job['html']);
+  if(strpos($job['html'], '</style>')>-1){
+    $htmltmp = explode("</style>", $job['html']);
+    $job['html'] = $htmltmp[1];
+  }
+  $job['jobdesc'] = $job['html'];
+  $job['temp']=1;
+}
+
+////////////////////////////////////
+ERIC variable exception
+
+$empname = trim((String) $j->company);
+$country = trim((string) $j->country);
+$url = trim((string) $j->url);
+
+$exceptions = array();
+$exceptions['empnames'] = 'LUXU PARKING|BRAUN|ECB ENGINEERING FIRM|DENTIX|FASTER|Natixis|TomTom|Grupo Constant'; //Cadena de empnames a excluir
+$aux = explode("|",$exceptions['empnames']); //Explode de la cadena para luego escapar caracteres especiales
+foreach($aux as $e) $exceptions['empnames_quoted'][] = preg_quote($e); //preg_quote coloca barra invertida antes de cada caracter especial
+$exceptions['empnames'] = implode("|",$exceptions['empnames_quoted']);//Volvemos a construir la cadena procesada
+$exceptions['empnamefound'] = preg_match('/('.$exceptions['empnames'].')/ui', $empname);//Match de empnames a excluir: 1 = encontrado; 0 = no encontrado
+
+if($exceptions['empnamefound']===0 
+   && strpos(strtoupper($country), 'ES')!==false
+   && strpos($url, 'senior-talent-acquisition-partner-madrid/28539810416344638783995327502')===false ){
+
+  $city = trim((string) $j->city);
+  $city = preg_replace('/Ciudad/i', "", $city);
+  $country = $country;
+  $country = preg_replace('/ES/i', "España", $country);
+
+  $arrloc=array();
+  if($city) $arrloc[] = $city;
+  if($country) $arrloc[] = $country;
+  $loc = implode(", ", $arrloc);
+
+  $job=array();
+  $job['temp']=1234;
+  $job['title'] = trim((String) $j->title);
+  $job['html'] = (String) $j->description;
+  $job['jobdesc'] = $job['html'];
+  $job['location'] = $loc;
+  $job['url'] = trim((String) $j->url);
+  $job['source_empname'] = $empname;
+}
+/////////////////////////////
+reverse.join
+
+$job['location'] = trim((string) $j->location);
+$job['location'] =explode("-", $job['location']);
+$arrloc=array();
+if($job['location']) $arrloc[] = $job['location'];
+$job['location']=array_reverse($job['location']);
+$job['location']= implode(", ", $job['location']);
+$job['location']=$job['location'].", US";
+
+/////////////////////////////
+
+Piden extraer únicamente los trabajos donde el url del trabajo contenga "utm_campaign=otrcompany"  
+
+
+
+$url = trim((String) $j->url);
+if(strpos(strtolower($url), 'utm_campaign=otrcompany') > 0){
+  
+  $city = trim((string) $j->market);
+  $state = trim((string) $j->state);
+  $country = trim((string) $j->country);
+
+  $arrloc=array();
+  if($city) $arrloc[] = $city;
+  if($state) $arrloc[] = $state;
+  if($country) $arrloc[] = $country;
+  $loc = implode(", ", $arrloc);
+
+  $job=array();
+  $job['temp']=152;
+  $job['title'] = trim((String) $j->title);
+  $job['html'] = (String) $j->description;
+  $job['jobdesc'] = $job['html'];
+  // $job['jobdesc'] = strstr($job['jobdesc'], "Per visionare l'informativa", true);
+  $loc = preg_replace('/, ,/i', ",", $loc);
+  $job['location'] = $loc;
+  $job['url'] = trim((String) $j->url);
+  $job['source_ppc'] = trim((String) $j->cpc);
+  $job['source_empname'] = trim((String) $j->company);
+  $job['source_jobtype'] = trim((String) $j->jobtype);
+  $job['dateposted_raw'] = trim((String) $j->date);
+}
+
+-0-0-0-0-0-0-
+$url = trim((String) $j->url);
+
+if(strpos($url, 'utm_campaign=hn_oo_london_on')!=0 ){
+
+  $job['url'] = $url;
+}
+
+
+/////////////////////////
+
+cuando trae caracteres especiales debemos extraerlo de esta manera:
+$job['title'] = trim((String) $j->{"job-name"});
+
+///////////////////
+
+Split 
+
+$title = trim((String) $j->title);
+$title = explode(" - ",$title);
+$title = $title[0];
+
+/////////////////  encontrar Email Miguel onfire 
+
+if($empname === 'Simply Biotech'){
+    preg_match_all('/[a-z0-9_\-\+\.]+@[a-z0-9\-]+\.([a-z]{2,4})(?:\.[a-z]{2})?/i', $job['html'], $matches);
+    $job['source_apply_email'] = $matches[0][0];
+  }
+
+/////////////////
+
+if(!$job['source_empname']){$job['source_empname'] = "Confidencial";}
+$job['title'] = str_replace("Vacature:", "", $job['title']);
+$job['title'] = str_replace("Vacature", "", $job['title']);
+////////////////
+split 
+$h = preg_split('/Apply/',$job['html']);
+  if(is_array($h)) $job['html'] = $h[0];
+  else $job['html'] = $job['html'];
+
+/////////////////
+
+//$job['html'] = preg_replace('/\.|:/','.<br>',$job['html']);
+$html = preg_split('/deine Bewerbung:/',$job['html']);
+if(is_array($html)) $job['html'] = $html[0];
+
+///////////////
+
+if(strlen(trim((String)$city)) < 4){
+  $loc = "Warsaw, Poland";
+}
+
+////////////////////////
+$job['location'] = ($location) ? $location : 'France';
+if(strpos(strtoupper($location), "MIEGE")!==false){$location = "MIEGE, France";}
+
+//Valida locations solo con dos comas sin texto
+$new_arr = array_map('trim', explode(',', $location)); //Ejecuta la función trim sobre cada elemnto del arreglo
+$location = implode(', ',$new_arr);
+$location = trim(str_replace(', ,','',$location));
+//echo "New Location: ".$location." Length: ".strlen($location)."\n";
+
+///////////////////////////
+
